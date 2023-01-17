@@ -38,6 +38,17 @@
 
     <!--Header (shoe the right one)-->
     <header>
+        <div class="shop__HeroSection">
+            <section class= heroSection1>
+            <span class ="nike">Nike</span>
+            <img src="assets/images/shoe_one.png" alt="">
+            </section>
+           <section class= "heroSection2">
+           <h1>Shoe the right <span>One</span>.</h1>
+           <a href="www.exemple.com">See our store</a>
+           </section>
+          
+        </div>
     </header>
 
     <!--main (our last products)-->
