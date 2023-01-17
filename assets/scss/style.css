@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap%27");
 @font-face {
   font-family: Roboto;
   src: url("../font/Roboto-Black.ttf");
@@ -27,6 +28,38 @@ body {
   color: #949494;
 }
 
+nav {
+  color: #e4e7eb;
+  font-family: Roboto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid #e4e7eb;
+  height: 8vh;
+  font-weight: bold;
+}
+nav .shop__nav {
+  display: flex;
+}
+nav .shop__nav a {
+  margin-right: 1.5vw;
+  font-size: 0.8rem;
+}
+nav .shop__login {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+nav .shop__login p {
+  color: #e4e7eb;
+  margin-left: 5%;
+}
+nav .shop__login img {
+  height: 4vh;
+  width: 4vw;
+}
+
 .shop__testimonials {
   display: flex;
   flex-direction: column;
@@ -54,4 +87,19 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+footer {
+  color: #e4e7eb;
+  font-family: Roboto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #e4e7eb;
+  height: 15vh;
+  font-weight: bold;
+}
+footer a {
+  margin-right: 1.5vw;
+  font-size: 0.8rem;
 }/*# sourceMappingURL=style.css.map */
