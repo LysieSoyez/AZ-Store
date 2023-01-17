@@ -13,24 +13,24 @@
 <!-- nav -->
 <nav>
     <p>
-            AZ[Store]
-        </p>
-        <div class="shop__nav">
-        <a>
+        AZ[Store]
+    </p>
+    <div class="shop__nav">
+        <a href="./index.php">
             Home
         </a>
-        <a>
+        <a href="#">
             About
         </a>
-        <a>
+        <a href="#">
             Products
         </a>
-        <a>
+        <a href="#">
             Contact
         </a>
-        </div>
+    </div>
         <button class="shop__login" id="login">
-            <img src="./assets/images/shopping-cart.svg">
+            <img src="./assets/images/shopping-cart.svg" alt="Shoping Card">
             <p> 
                 Login
             </p>
@@ -73,19 +73,19 @@
 
 <!-- footer-->
 <footer>
-        <a>
-            Home
-        </a>
-        <a>
-            About
-        </a>
-        <a>
-            Products
-        </a>
-        <a>
-            Contact
-        </a>
-    </footer>
+    <a href="./index.php">
+        Home
+    </a>
+    <a href="#">
+        About
+    </a>
+    <a href="./index.php">
+        Products
+    </a>
+    <a href="#">
+        Contact
+    </a>
+</footer>
 
 </body>
 </html>

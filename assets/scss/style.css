@@ -30,6 +30,10 @@ body {
   color: #949494;
   color: #e4e7eb;
 }
+body a {
+  color: #e4e7eb;
+  text-decoration: none;
+}
 body nav {
   color: #e4e7eb;
   font-family: Roboto;

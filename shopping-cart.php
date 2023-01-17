@@ -12,20 +12,20 @@
     
     <!-- nav -->
     <nav>
-    <p>
+        <p>
             AZ[Store]
         </p>
         <div class="shop__nav">
-        <a>
+        <a href="#">
             Home
         </a>
-        <a>
+        <a href="#">
             About
         </a>
-        <a>
+        <a href="#">
             Products
         </a>
-        <a>
+        <a href="#">
             Contact
         </a>
         </div>
@@ -43,16 +43,16 @@
 
 <!-- footer-->
 <footer>
-        <a>
+        <a href="#">
             Home
         </a>
-        <a>
+        <a href="#">
             About
         </a>
-        <a>
+        <a href="#">
             Products
         </a>
-        <a>
+        <a href="#">
             Contact
         </a>
     </footer>
