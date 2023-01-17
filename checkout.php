@@ -1,3 +1,9 @@
+<?php 
+
+$orderPlaced = true ; 
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +44,7 @@
     </nav>
 
 <!--Thanks message -->
+<?php echo  ($orderPlaced == true) ? '<h2 class="thanks">Thanks for so much<br/> for your order</h2>' : ''; ?>
 
 <!-- Form -->
 

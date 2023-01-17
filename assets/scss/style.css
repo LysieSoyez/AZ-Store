@@ -179,6 +179,14 @@ footer a {
   font-size: 0.8rem;
 }
 
+.thanks {
+  font-size: 2rem;
+  font-family: Roboto;
+  text-align: center;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
 @media screen and (min-width: 500px) {
   .shop__testimonials .testimonials__header img {
     width: 25vw;
