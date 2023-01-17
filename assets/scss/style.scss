@@ -1,21 +1,43 @@
-@import url(./fonts.scss);
-@import url(./mixins.scss);
+@font-face {
+    font-family: Roboto;
+    src: url("../font/Roboto-Black.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Medium";
+    src: url("../font/Roboto-Light.ttf");
+}
+
+// positionnement flex.
+
+@mixin flex-position($direction,$horizontal,$vertical){
+
+    display:flex;
+    flex-direction: $direction;
+    justify-content: $horizontal;
+    align-items: $vertical;
+
+    }
 
 *{
     list-style-type: none;
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
 
+:root{
+    --whites: #e4e7eb;
+    --blueFont : #2463eb;
 }
 
 body{
     min-height:100vh;
-    width:100vw;
-    font-family:Roboto;
+    max-width:100vw;
+    font-family: "Roboto Medium";
     background: rgb(0,0,0);
-                background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,24,39,1) 40%);
-
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,24,39,1) 40%);
+    color: #949494;
 }
 
 
@@ -33,6 +55,33 @@ body{
 
 
 // TEMOIGNAGES
+
+.shop__testimonials{
+    @include flex-position(column,center,center);
+
+.testimonials__header{
+    @include flex-position(column,center,center);
+
+    h2{
+
+        font-size:4rem;
+        padding:1rem;
+        color: #e4e7eb;
+        font-family: "Roboto";
+        text-transform:uppercase;
+
+        span{
+            color:var(--blueFont);
+        }
+
+    }
+}
+
+.testimonials__people{
+    @include flex-position(column,center,center);
+}
+
+}
 
 
 

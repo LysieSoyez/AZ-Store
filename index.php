@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/scss/style.css">
     <title>AZ[Store]</title>
 </head>
 <body>
@@ -19,7 +19,8 @@
     <!--main (our last products)-->
     <main>
 
-    <div class="shop__bestquality">
+    <div class="shop__testimonials">
+    <div class="testimonials__header">
     <img src="./assets/images/shoe_two.png">
     <h2>We provide you the <span>best</span> quality</h2>
     <p class="">
@@ -31,7 +32,8 @@
         natus nisi vel maxime fugit voluptas. Aliquid incidunt dicta
         eos facere. Repellendus ut optio nam, ipsam cupiditate non maxime?
     </p>
-<div class="">
+</div>
+<div class="testimonials__people">
     <div class="">
         <img src="./assets/images/image-emily.jpg">
             <b>Emily from xyz</b>
