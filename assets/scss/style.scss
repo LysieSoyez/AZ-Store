@@ -255,6 +255,7 @@ footer{
     .testimonials__people{
         @include flex-position(row,center,center);
         margin-top:2rem;
+        max-width:60vw;
     
         div{
             @include flex-position(column,center,center);

@@ -196,6 +196,7 @@ footer a {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    max-width: 60vw;
   }
   .shop__testimonials .testimonials__people div {
     display: flex;
