@@ -16,7 +16,7 @@
 
 :root {
   --whites: $white;
-  --blueFont: $blueFont;
+  --blueFont: #2463eb;
   --blueButton: $blueButton;
   --blueCardBackground: $blueCardBackground;
 }
@@ -185,10 +185,10 @@ footer a {
   }
   .shop__testimonials .testimonials__header h2 {
     font-size: 3rem;
-    min-width: 50vw;
+    max-width: 50vw;
   }
   .shop__testimonials .testimonials__header p {
-    min-width: 50vw;
+    max-width: 40vw;
   }
   .shop__testimonials .testimonials__people {
     display: flex;
@@ -217,5 +217,6 @@ footer a {
   .shop__testimonials .testimonials__people div p {
     text-align: center;
     padding: 1rem;
+    font-size: 0.9rem;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -35,7 +35,7 @@ $blueCardBackground: #111827;
 
 :root{
     --whites: $white;
-    --blueFont : $blueFont;
+    --blueFont : #2463eb;
     --blueButton : $blueButton;
     --blueCardBackground: $blueCardBackground;
 }
@@ -46,8 +46,11 @@ body{
     font-family: "Roboto Medium";
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,24,39,1) 40%);
-    color: #949494;    color: $white;
+    color: #949494; 
+    color: $white;
+
 // NAV
+
 nav{
     color: #e4e7eb;
     font-family: Roboto;
@@ -57,6 +60,7 @@ nav{
     border-bottom: 1px solid #e4e7eb;
     height: 8vh; 
     font-weight: bold;
+
     .shop__nav{
         display: flex;
         a{
@@ -64,6 +68,7 @@ nav{
             font-size: 0.8rem;
         }
     }
+
     .shop__login{
         background: none;
         border: none;
@@ -236,11 +241,11 @@ footer{
         h2{
     
             font-size:3rem;
-            min-width:50vw;    
+            max-width:50vw;    
         }
 
         p{
-            min-width:50vw;
+            max-width:40vw;
         }
     }
 
@@ -270,6 +275,7 @@ footer{
         p{
             text-align:center;
             padding:1rem;
+            font-size:0.9rem;
         }
     }
     }
