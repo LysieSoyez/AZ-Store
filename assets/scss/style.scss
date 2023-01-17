@@ -93,24 +93,56 @@ nav{
 
 .testimonials__header{
     @include flex-position(column,center,center);
+    text-align:center;
+    width:90vw;
+
+    img{
+        width:50vw;
+    }
 
     h2{
 
-        font-size:4rem;
+        font-size:2rem;
         padding:1rem;
         color: #e4e7eb;
         font-family: "Roboto";
         text-transform:uppercase;
+        width:90vw;
+        text-align:center;
 
         span{
             color:var(--blueFont);
         }
+
+      
 
     }
 }
 
 .testimonials__people{
     @include flex-position(column,center,center);
+
+    div{
+        @include flex-position(column,center,center);
+        margin-top:1rem;
+
+        b{
+            color:var(--whites);
+            font-weight:bold;
+        }
+
+    img{
+        width:4rem;
+        border-radius:3rem;
+        aspect-ratio:1/1;
+        margin-bottom:1rem;
+    }
+
+    p{
+        text-align:center;
+        padding:1rem;
+    }
+}
 }
 
 }
@@ -137,3 +169,58 @@ footer{
 // FORM
 
 
+
+@media screen and (min-width:500px){
+
+
+.shop__testimonials{
+
+    .testimonials__header{
+      
+        img{
+            width:25vw;
+        }
+    
+        h2{
+    
+            font-size:3rem;
+            min-width:50vw;    
+        }
+
+        p{
+            min-width:50vw;
+        }
+    }
+
+
+
+
+    .testimonials__people{
+        @include flex-position(row,center,center);
+        margin-top:2rem;
+    
+        div{
+            @include flex-position(column,center,center);
+            margin-top:4rem;
+    
+            b{
+                color:var(--whites);
+                font-weight:bold;
+            }
+    
+        img{
+            width:4rem;
+            border-radius:3rem;
+            aspect-ratio:1/1;
+            margin-bottom:1rem;
+        }
+    
+        p{
+            text-align:center;
+            padding:1rem;
+        }
+    }
+    }
+        
+}
+}

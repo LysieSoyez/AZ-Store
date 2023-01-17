@@ -71,13 +71,20 @@ nav .shop__login img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  width: 90vw;
+}
+.shop__testimonials .testimonials__header img {
+  width: 50vw;
 }
 .shop__testimonials .testimonials__header h2 {
-  font-size: 4rem;
+  font-size: 2rem;
   padding: 1rem;
   color: #e4e7eb;
   font-family: "Roboto";
   text-transform: uppercase;
+  width: 90vw;
+  text-align: center;
 }
 .shop__testimonials .testimonials__header h2 span {
   color: var(--blueFont);
@@ -87,6 +94,27 @@ nav .shop__login img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.shop__testimonials .testimonials__people div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.shop__testimonials .testimonials__people div b {
+  color: var(--whites);
+  font-weight: bold;
+}
+.shop__testimonials .testimonials__people div img {
+  width: 4rem;
+  border-radius: 3rem;
+  aspect-ratio: 1/1;
+  margin-bottom: 1rem;
+}
+.shop__testimonials .testimonials__people div p {
+  text-align: center;
+  padding: 1rem;
 }
 
 footer {
@@ -102,4 +130,45 @@ footer {
 footer a {
   margin-right: 1.5vw;
   font-size: 0.8rem;
+}
+
+@media screen and (min-width: 500px) {
+  .shop__testimonials .testimonials__header img {
+    width: 25vw;
+  }
+  .shop__testimonials .testimonials__header h2 {
+    font-size: 3rem;
+    min-width: 50vw;
+  }
+  .shop__testimonials .testimonials__header p {
+    min-width: 50vw;
+  }
+  .shop__testimonials .testimonials__people {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .shop__testimonials .testimonials__people div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+  }
+  .shop__testimonials .testimonials__people div b {
+    color: var(--whites);
+    font-weight: bold;
+  }
+  .shop__testimonials .testimonials__people div img {
+    width: 4rem;
+    border-radius: 3rem;
+    aspect-ratio: 1/1;
+    margin-bottom: 1rem;
+  }
+  .shop__testimonials .testimonials__people div p {
+    text-align: center;
+    padding: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
