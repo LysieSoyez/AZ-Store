@@ -248,6 +248,10 @@ body{
             border-radius: 10px;
             font-family: Roboto ;
             color: #e4e7eb;
+
+            &:active{
+                color:red;
+            }
         }
     }
 }

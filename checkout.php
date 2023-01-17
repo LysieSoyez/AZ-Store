@@ -41,7 +41,36 @@
 
 <!-- Form -->
 
-<form name="checkout">
+<?php 
+
+session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+
+if (isset($_POST['submit'])){
+
+$firstName = $_POST['firstName'];
+$lastName = $_POST['lastName'];
+$email = $_POST['email'];
+$address = $_POST['address'];
+$city = $_POST['city'];
+$code = $_POST['code'];
+$country = $_POST['country'];
+
+echo $firstName."<br/>";
+echo $lastName."<br/>";
+echo $email."<br/>";
+echo $address."<br/>";
+echo $city."<br/>";
+echo $code."<br/>";
+echo $country."<br/>";
+
+session_destroy();
+}
+}
+?>
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
 
     <label for="firstName">First Name</label>
     <input name="firstName" id="firstName" type="text"/>
@@ -64,7 +93,7 @@
     <label for="country">Country</label>
     <input name="country" type="text" id="country">
     
-    <input name="submit" type="button" id="submit" value="Submit">
+    <input name="submit" type="submit" id="submit" value="Submit">
 
 </form>
 
@@ -88,4 +117,5 @@
     </footer>
 
 </body>
+
 </html>
