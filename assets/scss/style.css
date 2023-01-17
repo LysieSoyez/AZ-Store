@@ -13,4 +13,20 @@ body {
   font-family: Roboto;
   background: rgb(0, 0, 0);
   background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(17, 24, 39) 40%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+mainshop_article {
+  display: flex;
+  flex-direction: row;
+}
+mainshop_article h3 {
+  color: white;
+}
+main img {
+  width: 5rem;
+  height: 5rem;
 }/*# sourceMappingURL=style.css.map */

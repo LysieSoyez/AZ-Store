@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/scss/style.css">
     <title>AZ[Store]</title>
 </head>
 <body>
@@ -28,11 +28,11 @@
             ],
         
         ];
-
+        
         ?>
-    
-        <h3> Our last products </h3>
-            <div class="shop__article">
+        <section class ="shop__article">
+         <h3> Our <span class="">last products </span></h3>
+            <div class="shop__article__card">
                 <img src="./assets/images/shoe_one.png">
                     <span class="shop__article__name"></span>
                     <span class="shop__article__price"></span> 
@@ -41,7 +41,7 @@
                     </form>
             </div>
 
-            <div class="shop__article">
+            <div class="shop__article__card">
                 <img src="./assets/images/shoe_one.png">
                     <span class="shop__article__name"></span>
                     <span class="class__article__price"></span>
@@ -50,7 +50,7 @@
                     </form>
             </div>
 
-            <div class="shop__article">
+            <div class="shop__article__card">
                 <img src="./assets/images/shoe_one.png">
                     <span class="shop__article__name"></span>
                     <span class="class__article__price"></span>
@@ -59,7 +59,7 @@
                     </form>
             </div> 
 
-            <div class="shop__article">
+            <div class="shop__article__card">
                 <img src="./assets/images/shoe_one.png">
                     <span class="shop__article__name"></span>
                     <span class="class__article__price"></span>
@@ -67,6 +67,7 @@
                         <input type="submit" name="button4" value="Add to card"/> 
                     </form>
             </div>
+            </section>
            
     <!--Comments section-->
 

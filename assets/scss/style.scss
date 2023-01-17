@@ -29,8 +29,22 @@ body{
 
 
 // ARTICLES
+main{
+    display: flex;
+    justify-content: center;
 
-
+&shop_article{ 
+        display: flex;
+        flex-direction: row;
+        h3{
+            color: white;
+        }
+    }
+         img{
+        width:5rem;
+        height: 5rem;
+     }
+}
 
 // TEMOIGNAGES
 
