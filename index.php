@@ -18,13 +18,26 @@
 
     <!--main (our last products)-->
     <main>
+        <?php
+        $items = [
+            [
+                'id' => 1,
+                'product' => 'Nike Air Max 270',
+                'price' => 234,
+                'image_url' => './assets/images/shoe_one.png', 
+            ],
+        
+        ];
+
+        ?>
+    
         <h3> Our last products </h3>
             <div class="shop__article">
                 <img src="./assets/images/shoe_one.png">
                     <span class="shop__article__name"></span>
                     <span class="shop__article__price"></span> 
                     <form method="post">
-                        <input type="submit" name="button" value="Add to card"/> 
+                        <input type="submit" name="button1" value="Add to card"/> 
                     </form>
             </div>
 
@@ -33,7 +46,7 @@
                     <span class="shop__article__name"></span>
                     <span class="class__article__price"></span>
                     <form method="post">
-                        <input type="submit" name="button" value="Add to card"/> 
+                        <input type="submit" name="button2" value="Add to card"/> 
                     </form>
             </div>
 
@@ -42,7 +55,7 @@
                     <span class="shop__article__name"></span>
                     <span class="class__article__price"></span>
                     <form method="post">
-                        <input type="submit" name="button" value="Add to card"/> 
+                        <input type="submit" name="button3" value="Add to card"/> 
                     </form>
             </div> 
 
@@ -51,7 +64,7 @@
                     <span class="shop__article__name"></span>
                     <span class="class__article__price"></span>
                     <form method="post">
-                        <input type="submit" name="button" value="Add to card"/> 
+                        <input type="submit" name="button4" value="Add to card"/> 
                     </form>
             </div>
            
