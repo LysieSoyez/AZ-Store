@@ -15,18 +15,17 @@ body {
   background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(17, 24, 39) 40%);
 }
 
-main {
-  display: flex;
-  justify-content: center;
+main h3 {
+  color: rgb(62, 31, 241);
+  margin-bottom: 2rem;
+}
+main h3 .shop__h3__span {
+  color: white;
 }
 main .shop__article {
   display: flex;
   flex-direction: row;
-  width: 2rem;
-  height: 2rem;
-}
-main .shop__article .shop__article__card h3 {
-  color: white;
+  justify-content: space-around;
 }
 main .shop__article .shop__article__card img {
   width: 3rem;

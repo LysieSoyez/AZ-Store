@@ -30,8 +30,10 @@
         ];
         
         ?>
-        <section class ="shop__article">
-         <h3> Our <span class="">last products </span></h3>
+        
+         <h3> Our <span class="shop__h3__span">last products </span></h3>
+         
+         <section class ="shop__article">
             <div class="shop__article__card">
                 <img src="./assets/images/shoe_one.png">
                     <span class="shop__article__name"></span>
