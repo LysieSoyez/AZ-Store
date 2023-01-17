@@ -43,5 +43,22 @@
 
 <!-- Validation place -->
 
+
+<!-- footer-->
+<footer>
+        <a>
+            Home
+        </a>
+        <a>
+            About
+        </a>
+        <a>
+            Products
+        </a>
+        <a>
+            Contact
+        </a>
+    </footer>
+
 </body>
 </html>
