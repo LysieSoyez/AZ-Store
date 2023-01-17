@@ -18,7 +18,12 @@
 
     <!--main (our last products)-->
     <main>
-
+    <?php 
+            $card = array(
+                'name' => 'NIKE Air',
+                'price' => '234€',
+            );
+        ?>
     <!--Comments section-->
 
     </main>
