@@ -10,6 +10,27 @@
 <body>
     <!-- nav -->
     <nav>
+    <p>
+            AZ[Store]
+        </p>
+        <a>
+            Home
+        </a>
+        <a>
+            About
+        </a>
+        <a>
+            Products
+        </a>
+        <a>
+            Contact
+        </a>
+        <button>
+            <img src="./assets/images/shopping-cart.svg">
+            <p> 
+                Login
+            </p>
+        </button> 
     </nav>
 
     <!--Header (shoe the right one)-->
