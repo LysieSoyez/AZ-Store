@@ -96,7 +96,7 @@
         <?php
         $items = [
             [
-                'id' => 1,
+                'id' => 4,
                 'product' => 'Nike Air Max 270',
                 'price' => 234,
                 'image_url' => './assets/images/shoe_one.png', 
