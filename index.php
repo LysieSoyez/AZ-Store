@@ -97,49 +97,55 @@
         $items = [
             [
                 'id' => 4,
-                'product' => 'Nike Air Max 270',
+                'product' => 'Nike Air Max 270 ',
                 'price' => 234,
                 'image_url' => './assets/images/shoe_one.png', 
             ],
         
         ];
         
+        foreach($items as $item) {
+            print_r($item['product']);
+            print_r($item['price']);
+        }
+
+    
         ?>
         
          <h3> Our <span class="shop__h3__span">last products </span></h3>
          
          <section class ="shop__article">
             <div class="shop__article__card">
-                <img src="./assets/images/shoe_one.png">
-                    <span class="shop__article__name"></span>
-                    <span class="shop__article__price"></span> 
+                <img src=<?php echo ($item['image_url']) ?> >
+                    <span class="shop__article__name"><?php echo ($item['product']) ?> </span>
+                    <span class="shop__article__price"><?php echo ($item['price']) ?>  €</span> 
                     <form method="post">
                         <input type="submit" name="button1" value="Add to card"/> 
                     </form>
             </div>
 
             <div class="shop__article__card">
-                <img src="./assets/images/shoe_one.png">
-                    <span class="shop__article__name"></span>
-                    <span class="class__article__price"></span>
+                <img src=<?php echo ($item['image_url'])  ?>>
+                    <span class="shop__article__name"><?php echo ($item['product']) ?> </span>
+                    <span class="shop__article__price"><?php echo ($item['price']) ?> €</span> 
                     <form method="post">
                         <input type="submit" name="button2" value="Add to card"/> 
                     </form>
             </div>
 
             <div class="shop__article__card">
-                <img src="./assets/images/shoe_one.png">
-                    <span class="shop__article__name"></span>
-                    <span class="class__article__price"></span>
+                <img src=<?php echo ($item['image_url'])  ?>>
+                    <span class="shop__article__name"><?php echo ($item['product']) ?> </span>
+                    <span class="shop__article__price"><?php echo ($item['price']) ?> €</span> 
                     <form method="post">
                         <input type="submit" name="button3" value="Add to card"/> 
                     </form>
             </div> 
 
             <div class="shop__article__card">
-                <img src="./assets/images/shoe_one.png">
-                    <span class="shop__article__name"></span>
-                    <span class="class__article__price"></span>
+                <img src=<?php echo ($item['image_url'])  ?>>
+                    <span class="shop__article__name"><?php echo ($item['product']) ?> </span>
+                    <span class="shop__article__price"><?php echo ($item['price']) ?> €</span> 
                     <form method="post">
                         <input type="submit" name="button4" value="Add to card"/> 
                     </form>
