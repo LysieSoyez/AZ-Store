@@ -1,0 +1,14 @@
+$backgkround :  background: rgb(0,0,0);
+                background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,24,39,1) 40%);
+
+$white :#e4e7eb;
+
+$blueFont :#2463eb;
+
+$gradient : background: rgb(58,125,241);
+            background: linear-gradient(90deg, rgba(58,125,241,1) 0%, rgba(31,61,142,1) 100%);
+
+$blueButton : #3b81f6;
+
+$blueCardBackground: #111827;
+
