@@ -10,6 +10,29 @@
 <body>
     <!-- nav -->
     <nav>
+    <p>
+            AZ[Store]
+        </p>
+        <div class="shop__nav">
+        <a>
+            Home
+        </a>
+        <a>
+            About
+        </a>
+        <a>
+            Products
+        </a>
+        <a>
+            Contact
+        </a>
+        </div>
+        <button class="shop__login" id="login">
+            <img src="./assets/images/shopping-cart.svg">
+            <p> 
+                Login
+            </p>
+        </button> 
     </nav>
 
     <!--Header (shoe the right one)-->
@@ -36,6 +59,18 @@
     
     <!-- footer-->
     <footer>
+        <a>
+            Home
+        </a>
+        <a>
+            About
+        </a>
+        <a>
+            Products
+        </a>
+        <a>
+            Contact
+        </a>
     </footer>
 </body>
 </html>
