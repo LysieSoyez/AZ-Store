@@ -19,14 +19,16 @@ main {
   display: flex;
   justify-content: center;
 }
-mainshop_article {
+main .shop__article {
   display: flex;
   flex-direction: row;
+  width: 2rem;
+  height: 2rem;
 }
-mainshop_article h3 {
+main .shop__article .shop__article__card h3 {
   color: white;
 }
-main img {
-  width: 5rem;
-  height: 5rem;
+main .shop__article .shop__article__card img {
+  width: 3rem;
+  height: 3rem;
 }/*# sourceMappingURL=style.css.map */

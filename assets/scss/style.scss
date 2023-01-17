@@ -33,17 +33,22 @@ main{
     display: flex;
     justify-content: center;
 
-&shop_article{ 
-        display: flex;
-        flex-direction: row;
+.shop__article{ 
+    display: flex;
+    flex-direction: row;
+    width: 2rem;
+    height: 2rem;
+    .shop__article__card{  
         h3{
             color: white;
-        }
-    }
+        } 
          img{
-        width:5rem;
-        height: 5rem;
-     }
+        width:3rem;
+        height: 3rem;}    
+       
+    }  
+}
+         
 }
 
 // TEMOIGNAGES
