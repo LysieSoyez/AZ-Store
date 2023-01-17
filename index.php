@@ -14,6 +14,11 @@
 
     <!--Header (shoe the right one)-->
     <header>
+        <div class="heroSection">
+            <h1>Nike</h1>
+            <h2>Shoe the right <span>One</span></h2>
+            <button type="button">See u </button>
+        </div>
     </header>
 
     <!--main (our last products)-->
