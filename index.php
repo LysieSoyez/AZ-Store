@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/scss/style.css">
     <title>AZ[Store]</title>
 </head>
 <body>
@@ -14,10 +14,16 @@
 
     <!--Header (shoe the right one)-->
     <header>
-        <div class="heroSection">
-            <h1>Nike</h1>
-            <h2>Shoe the right <span>One</span></h2>
-            <button type="button">See u </button>
+        <div class="shop__HeroSection">
+            <section class= heroSection1>
+            <span class ="nike">Nike</span>
+            <img src="assets/images/shoe_one.png" alt="">
+            </section>
+           <section class= "heroSection2">
+           <h1>Shoe the right <span>One</span>.</h1>
+           <a href="www.exemple.com">See our store</a>
+           </section>
+          
         </div>
     </header>
 

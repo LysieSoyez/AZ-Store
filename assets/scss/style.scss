@@ -1,0 +1,93 @@
+@import url(./fonts.scss);
+@import url(./mixins.scss);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$white :#e4e7eb;
+$blueFont :#2463eb;
+$blueButton : #3b81f6;
+$blueCardBackground: #111827;
+
+*{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+    min-height:100vh;
+    width:100vw;
+    font-family:Roboto;
+    background: rgb(0,0,0);
+                background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,24,39,1) 40%);
+    color: $white;
+// NAV
+
+// HERO SECTION
+   header{
+    .shop__HeroSection{    
+        .heroSection1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 85vw;
+            .nike{
+                color: rgba(17,24,39,1);
+                font-size: 43vw;
+                opacity: 0.5;
+                text-transform: uppercase;
+                font-weight: bolder;
+                -webkit-text-stroke-width: 0.1vw;
+                -webkit-text-stroke-color: $white;
+            }
+            img{
+                width: 75vw;
+                position: absolute;
+                z-index: 1;
+                left: 12.5vw;
+            }
+        }
+        .heroSection2{
+            width: 95vw;
+            margin: 10vw 0 0 5vw;
+            h1{
+                text-transform: uppercase; 
+                font-size: 15vw;
+                margin-bottom: 7.5vw;
+            }
+            span{
+                color: $blueFont;
+            }
+            a{
+                background: rgb(58,125,241);
+                background: linear-gradient(90deg, rgba(58,125,241,1) 0%, rgba(31,61,142,1) 100%);
+                border: none;
+                padding: 3vw;
+                font-size: 3.5vw;
+                border-radius: 1vw;
+                color: $white;
+                text-decoration: none;
+                margin-top: 10vw;
+            }
+        }
+    }
+   }
+}
+
+
+// ARTICLES
+
+
+
+// TEMOIGNAGES
+
+
+
+// FOOTER
+
+
+// FORM
+
+
