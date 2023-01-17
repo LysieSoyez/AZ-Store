@@ -179,6 +179,19 @@ footer a {
   font-size: 0.8rem;
 }
 
+body form {
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: Roboto;
+}
+body form input {
+  width: 50%;
+  border-radius: 20px;
+}
+
 @media screen and (min-width: 500px) {
   .shop__testimonials .testimonials__header img {
     width: 25vw;

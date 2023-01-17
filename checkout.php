@@ -41,6 +41,33 @@
 
 <!-- Form -->
 
+<form name="checkout">
+
+    <label for="firstName">First Name</label>
+    <input name="firstName" id="firstName" type="text"/>
+    
+    <label for="lastName">Last Name</label>
+    <input name="lastName" id="lastName" type="text"/>
+    
+    <label for="email">Email</label>
+    <input name="email" type="email" id="email">
+    
+    <label for="address">Address</label>
+    <input name="address" type="text" id="address">
+    
+    <label for="city">City</label> 
+    <input name="city" type="text" id="city">
+     
+    <label for="code">Zip Code</label>
+    <input name="code" type="number" id="code">
+    
+    <label for="country">Country</label>
+    <input name="country" type="text" id="country">
+    
+    <input name="submit" type="button" id="submit" value="Submit">
+
+</form>
+
 <!-- Validation place -->
 
 

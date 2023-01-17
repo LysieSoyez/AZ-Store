@@ -224,7 +224,20 @@ footer{
     } 
 
 // FORM
-
+body{
+    form{
+        margin: 5%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-family: Roboto;
+        input{
+            width: 50%;
+            border-radius: 20px;
+        }
+    }
+}
 
 
 @media screen and (min-width:500px){
