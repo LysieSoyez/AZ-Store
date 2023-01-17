@@ -18,12 +18,30 @@
 
     <!--main (our last products)-->
     <main>
-    <?php 
-            $card = array(
-                'name' => 'NIKE Air',
-                'price' => '234€',
-            );
-        ?>
+        <h3> Our last products </h3>
+            <div class="shop__article">
+                <img src="./assets/images/shoe_two.png">
+                    <span class="shop__article__name">NIKE Air</span>
+                    <span class="class__article__price">234€</span>
+            </div>
+            <h3> Our last products </h3>
+            <div class="shop__article">
+                <img src="./assets/images/shoe_two.png">
+                    <span class="shop__article__name">NIKE Air</span>
+                    <span class="class__article__price">234€</span>
+            </div>
+            <h3> Our last products </h3>
+            <div class="shop__article">
+                <img src="./assets/images/shoe_two.png">
+                    <span class="shop__article__name">NIKE Air</span>
+                    <span class="class__article__price">234€</span>
+            </div>
+            <h3> Our last products </h3>
+            <div class="shop__article">
+                <img src="./assets/images/shoe_two.png">
+                    <span class="shop__article__name">NIKE Air</span>
+                    <span class="class__article__price">234€</span>
+            </div>
     <!--Comments section-->
 
     </main>
