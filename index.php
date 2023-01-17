@@ -20,28 +20,41 @@
     <main>
         <h3> Our last products </h3>
             <div class="shop__article">
-                <img src="./assets/images/shoe_two.png">
-                    <span class="shop__article__name">NIKE Air</span>
-                    <span class="class__article__price">234€</span>
+                <img src="./assets/images/shoe_one.png">
+                    <span class="shop__article__name"></span>
+                    <span class="shop__article__price"></span> 
+                    <form method="post">
+                        <input type="submit" name="button" value="Add to card"/> 
+                    </form>
             </div>
-            <h3> Our last products </h3>
+
             <div class="shop__article">
-                <img src="./assets/images/shoe_two.png">
-                    <span class="shop__article__name">NIKE Air</span>
-                    <span class="class__article__price">234€</span>
+                <img src="./assets/images/shoe_one.png">
+                    <span class="shop__article__name"></span>
+                    <span class="class__article__price"></span>
+                    <form method="post">
+                        <input type="submit" name="button" value="Add to card"/> 
+                    </form>
             </div>
-            <h3> Our last products </h3>
+
             <div class="shop__article">
-                <img src="./assets/images/shoe_two.png">
-                    <span class="shop__article__name">NIKE Air</span>
-                    <span class="class__article__price">234€</span>
-            </div>
-            <h3> Our last products </h3>
+                <img src="./assets/images/shoe_one.png">
+                    <span class="shop__article__name"></span>
+                    <span class="class__article__price"></span>
+                    <form method="post">
+                        <input type="submit" name="button" value="Add to card"/> 
+                    </form>
+            </div> 
+
             <div class="shop__article">
-                <img src="./assets/images/shoe_two.png">
-                    <span class="shop__article__name">NIKE Air</span>
-                    <span class="class__article__price">234€</span>
+                <img src="./assets/images/shoe_one.png">
+                    <span class="shop__article__name"></span>
+                    <span class="class__article__price"></span>
+                    <form method="post">
+                        <input type="submit" name="button" value="Add to card"/> 
+                    </form>
             </div>
+           
     <!--Comments section-->
 
     </main>
