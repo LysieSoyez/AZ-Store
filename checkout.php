@@ -9,14 +9,7 @@
     <title>AZ[STORE] - Checkout page</title>
 </head>
 <body>
-<main>
-        <div class="heroSection">
-            <h1>Shoe the right <span>One</span></h1>
-            <button>
-                
-            </button>
-        </div>
-    </main>
+
 
 
 <!--Thanks message -->
