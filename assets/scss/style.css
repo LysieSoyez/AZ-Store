@@ -203,6 +203,42 @@ footer a {
   font-size: 0.8rem;
 }
 
+body form {
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: Roboto;
+}
+body form input {
+  width: 50%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: none;
+  margin: 0.5vh 0 2% 0;
+  padding: 0.5%;
+}
+body form .error {
+  font-weight: 300;
+  color: #3b81f6;
+  margin-bottom: 0.5rem;
+}
+body form #submit {
+  background-color: #2463eb;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100px;
+  padding: 1%;
+  border-radius: 10px;
+  font-family: Roboto;
+  color: #e4e7eb;
+}
+body form #submit:active {
+  color: red;
+}
+
 @media screen and (min-width: 500px) {
   body header .shop__HeroSection {
     display: flex;

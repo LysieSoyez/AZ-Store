@@ -250,7 +250,45 @@ footer{
     } 
 
 // FORM
+body{
+    form{
+        margin: 5%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-family: Roboto;
 
+        input{
+            width: 50%;
+            max-width: 400px;
+            border-radius: 5px;
+            border: none;
+            margin: 0.5vh 0 2% 0;
+            padding: 0.5%;
+        }
+
+        .error{
+            font-weight:300;
+            color:#3b81f6;
+            margin-bottom:0.5rem;
+        }
+
+        #submit{
+            background-color: #2463eb ;
+            width: max-content;
+            max-width: 100px;
+            padding: 1%;
+            border-radius: 10px;
+            font-family: Roboto ;
+            color: #e4e7eb;
+
+            &:active{
+                color:red;
+            }
+        }
+    }
+}
 
 
 @media screen and (min-width:500px){
