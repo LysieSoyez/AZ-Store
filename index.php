@@ -79,19 +79,19 @@ $items = [
         'id' => 2,
         'product' => 'NIKE Vaporfly ',
         'price' => 149,
-        'image_url' => './assets/images/shoe_one.png', 
+        'image_url' => './assets/images/Nike-vaporfly.png', 
     ],
     [
         'id' => 3,
         'product' => 'NIKE Pegasus',
         'price' => 159,
-        'image_url' => './assets/images/shoe_one.png', 
+        'image_url' => './assets/images/Nike-Pegasus.png', 
     ],
     [
         'id' => 4,
         'product' => 'NIKE Flyease',
         'price' => 129,
-        'image_url' => './assets/images/shoe_one.png', 
+        'image_url' => './assets/images/Nike-flyease.png', 
     ]
 
 ];
