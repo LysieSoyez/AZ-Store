@@ -57,6 +57,19 @@ if (isset($_POST['id'])) {
     }
 }
 
+if ($_POST['id']) {
+    $upid = $_POST['upid'];
+    $acol = array_column($_SESSION['cart'], $cart['pro_id']);
+    if (in_array($_POST['id'], $acol)) {
+      $_SESSION['cart'][$upid][$card['qty']] = $_POST[$card['qty']];
+    } else {
+      $item = [
+        'pro_id' => $upid,
+        'qty' => 1
+      ];
+      $_SESSION['cart'][$upid] = $item;
+    }
+}
 
 
 ?>
@@ -110,8 +123,7 @@ echo '<div class="cart__line">';
     echo '<span>'.$cart['qty'].'</span>';
     echo '<span>'.$items[$cart['pro_id']-1]['product'].'</span>';
     echo '<span>'.$items[$cart['pro_id']-1]['price'].'</span>';
-    echo '<form method="post">
-    <input name="id" value='.$cart['pro_id'].'><input type="submit" value="-"></form>';
+    echo '<form method="post"><input name="id" value='.$cart['pro_id'].'><input type="submit" value="-"></form>';
     echo '</div>';
 }
 
