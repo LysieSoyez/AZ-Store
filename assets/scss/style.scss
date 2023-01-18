@@ -353,6 +353,153 @@ body {
     text-transform: uppercase;
 }
 
+// shopping card 
+
+body{
+    .shopping_cart{
+        .product{
+           width: 90vw;
+           margin: 5vw auto;
+            .member{
+                width: 90vw;
+                border: solid 1px $white;
+                h2{
+                    font-size:7vw;
+                    margin-left: 5vw;
+                    margin-top: 3vw;
+                }
+                p{
+                    font-size:4vw;
+                    margin-left: 5vw;
+                    margin-top: 3vw;
+                    margin-bottom: 3vw;
+                }
+                span{
+                    color: $blueFont;
+    
+                }
+            }
+            .bag{
+                width: 90vw;
+                h2{
+                    margin-top: 8vw;
+                    margin-left: 5vw;
+                    font-size: 7vw;
+                    border-bottom: 1px $white solid;
+                    padding-bottom: 5vw;
+                    text-align: center;
+                    
+                }
+            }
+            .products{
+                margin-left: 5vw;
+                margin-top: 5vw;
+                border-bottom: solid $white 1px;
+                padding-bottom: 5vw;
+                
+                    .price_product{
+                        font-size: 4vw;
+                    }
+                    .name_product{
+                        font-size: 6vw;
+                        
+                    }
+                    .quantity_product{
+                        font-size: 3.5vw;
+                    }
+                    input{
+                        display: flex;
+                        width: 5vw;
+                        height: 5vw;
+                        border-radius: 50%;
+                        background-color: transparent;
+                        border: 1px solid $white;
+                        color: $white;
+                        align-items: center;
+                        justify-content: center;
+                        line-height: 1vw;
+                        margin-left: -80vw;
+                        margin-top: -2vw;
+
+                    }
+            }
+           
+        }
+        .pay{
+            width: 90vw;
+            margin-left: 5vw;
+            h2{
+                margin-top: 8vw;
+                margin-left: 5vw;
+                font-size: 7vw;
+                border-bottom: 1px $white solid;
+                padding-bottom: 5vw;
+                text-align: center;
+            }
+            h3{
+                font-size: 5vw;
+                color: $blueFont;
+                margin-top: 5vw;
+                
+            }
+            #promo-code{
+                width: 40vw;
+                height: 6vw;
+                margin-left: 6vw;
+                margin-top: 5vw;
+                margin-right: 3vw;
+                border: none;
+                font-size: 5vw;
+                border-radius: 50vw;
+            }
+            button{
+                width: 18vw;
+                height: 9vw;
+                background-color:transparent;
+                color: $white;
+                font-size: 3vw;
+                border: $white solid 1px;
+                border-radius:5vw;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+            h4{
+                font-size: 5vw;
+                text-transform: uppercase;
+                font-weight: bolder;
+                margin-top: 10vw;
+                margin-left: 6vw;
+                margin-bottom: 10vw;
+                border-bottom: 1px solid $white;
+                padding-bottom: 5vw;
+            }
+            a{
+                background-color: $white;
+                border-radius: 40vw;
+                width: 50vw;
+                height: 10vw;
+                margin: 0 auto;
+                text-decoration: none;
+                font-weight: bolder;
+                font-size: 6vw;
+                display: flex;
+                align-items: center;
+                justify-content: center; 
+                margin-bottom: 5vw;
+                color: #111827;
+                &:hover{
+                    opacity: 0.9;
+                }
+            }
+            .paypal{
+                background-color: transparent;
+                border: solid 1px $white;
+                color: $white;
+            }
+        }}
+}
+
 
 
 @media screen and (min-width:500px) {
