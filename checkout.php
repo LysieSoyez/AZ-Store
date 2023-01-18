@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+if (isset($_SESSION['orderPlaced'])){
+$orderPlaced = $_SESSION['orderPlaced'];
+} else {
+    $orderPlaced = false;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -47,6 +53,7 @@ session_start();
     </nav>
 
 <!--Thanks message -->
+<?php echo  ($orderPlaced == true) ? '<h2 class="thanks">Thank you so much<br/> for your order, <span>'.$_SESSION['firstName'].'</span>.</h2>' : ''; ?>
 
 <!-- Form -->
 
@@ -57,7 +64,7 @@ $firstName = $lastName = $email = $address = $city = $code = $country = "";
 
 $errFirstName = $errLastName = $errEmail = $errAddress = $errCity = $errCode = $errCountry = "";
 
-$errors = []; 
+$errors = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if (isset($_POST['submit'])){
@@ -66,10 +73,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $firstName = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
             if (preg_match('/^[a-zA-Z-]{1,30}$/', $firstName)){
                 $firstName = $_POST['firstName'];
+                $_SESSION['firstName'] = $firstName;
               } else {
                 $errFirstName = "firstname must be less than 30 characters and letters only";    
                 $firstName = "";
                 $errors[] =  "name";
+               
             }
         } else {
         $errFirstName = "first name cannot be empty";
@@ -191,14 +200,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     if (count($errors) == 0){
-        $orderPlaced == true;
+        unset($_SESSION['cart']);
+        $_SESSION['orderPlaced'] = true;
+        header("refresh:0");
+        
     };
 }
 
 ?>
 
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+<form style="display:<?php echo ($orderPlaced == true) ? "none" : "flex";?>" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
 
     <label for="firstName">First Name</label>
     <input name="firstName" id="firstName" type="text" value="<?php echo $firstName;?>"/>

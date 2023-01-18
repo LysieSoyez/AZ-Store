@@ -45,9 +45,8 @@ body {
     min-height: 100vh;
     max-width: 100vw;
     font-family: "Roboto Medium";
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(17, 24, 39, 1) 40%);
-    color: #949494;
+    background: rgb(0,0,0);
+                background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,24,39,1) 40%);
     color: $white;
 
     // NAV
@@ -267,6 +266,23 @@ footer {
     }
 }
 
+
+    // THANKS MESSAGE
+.thanks{
+
+    font-size:2rem;
+    font-family:Roboto;
+    text-align:center;
+    padding:2rem;
+    text-transform:uppercase;
+
+    span{
+        color:var(--blueFont);
+    }
+
+
+}
+
 // FORM
 body {
     form {
@@ -298,19 +314,22 @@ body {
             max-width: 100px;
             padding: 1%;
             border-radius: 10px;
-            font-family: Roboto;
-            color: #e4e7eb;
-
-            &:active {
-                color: red;
-            }
-
-            &:active{
-                color:red;
-            }
+            font-family: Roboto ;
+            color: #e4e7eb;}
         }
+
+        // THANKS MESSAGE
     }
+.thanks{
+
+    font-size:2rem;
+    font-family:Roboto;
+    text-align:center;
+    padding:2rem;
+    text-transform:uppercase;
 }
+
+
 
 @media screen and (min-width:500px){
 body{
@@ -391,18 +410,21 @@ height: auto;
                     font-weight: bold;
                 }
 
-                img {
-                    width: 4rem;
-                    border-radius: 3rem;
-                    aspect-ratio: 1/1;
-                    margin-bottom: 1rem;
-                }
 
-                p {
-                    text-align: center;
-                    padding: 1rem;
-                    font-size: 0.9rem;
-                }
+
+
+    .testimonials__people{
+        @include flex-position(row,center,center);
+        margin-top:2rem;
+        max-width:60vw;
+    
+        div{
+            @include flex-position(column,center,center);
+            margin-top:4rem;
+    
+            b{
+                color:var(--whites);
+                font-weight:bold;
             }
         }
 

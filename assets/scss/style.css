@@ -28,7 +28,6 @@ body {
   font-family: "Roboto Medium";
   background: rgb(0, 0, 0);
   background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(17, 24, 39) 40%);
-  color: #949494;
   color: #e4e7eb;
 }
 body nav {
@@ -209,6 +208,17 @@ footer a {
   text-decoration: none;
 }
 
+.thanks {
+  font-size: 2rem;
+  font-family: Roboto;
+  text-align: center;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+.thanks span {
+  color: var(--blueFont);
+}
+
 body form {
   margin: 5%;
   display: flex;
@@ -242,8 +252,13 @@ body form #submit {
   font-family: Roboto;
   color: #e4e7eb;
 }
-body form #submit:active {
-  color: red;
+
+.thanks {
+  font-size: 2rem;
+  font-family: Roboto;
+  text-align: center;
+  padding: 2rem;
+  text-transform: uppercase;
 }
 body form #submit:active {
   color: red;
@@ -301,6 +316,7 @@ body form #submit:active {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    max-width: 60vw;
   }
   .shop__testimonials .testimonials__people div {
     display: flex;
