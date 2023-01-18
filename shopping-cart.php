@@ -46,7 +46,7 @@ echo "<pre>";
 echo $sum;
 echo "<pre>";
 
-foreach($_SESSION['cart'] as $item){
+
 if (isset($_POST['id'])) {
     $proid = $_POST['id'];
     unset($_SESSION['cart'][$proid]);
