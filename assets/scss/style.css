@@ -234,7 +234,6 @@ body form input {
   border: none;
   margin: 0.5vh 0 2% 0;
   padding: 0.5%;
-  padding: 0.5%;
 }
 body form .error {
   font-weight: 300;
@@ -259,9 +258,6 @@ body form #submit {
   text-align: center;
   padding: 2rem;
   text-transform: uppercase;
-}
-body form #submit:active {
-  color: red;
 }
 
 @media screen and (min-width: 500px) {
@@ -316,7 +312,6 @@ body form #submit:active {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    max-width: 60vw;
   }
   .shop__testimonials .testimonials__people div {
     display: flex;
@@ -329,15 +324,23 @@ body form #submit:active {
     color: var(--whites);
     font-weight: bold;
   }
-  .shop__testimonials .testimonials__people div img {
-    width: 4rem;
-    border-radius: 3rem;
-    aspect-ratio: 1/1;
-    margin-bottom: 1rem;
+  .shop__testimonials .testimonials__people .testimonials__people {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    max-width: 60vw;
   }
-  .shop__testimonials .testimonials__people div p {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+  .shop__testimonials .testimonials__people .testimonials__people div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+  }
+  .shop__testimonials .testimonials__people .testimonials__people div b {
+    color: var(--whites);
+    font-weight: bold;
   }
 }/*# sourceMappingURL=style.css.map */
