@@ -1,7 +1,5 @@
 <?php 
-
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -127,46 +125,6 @@ $_SESSION['cart'][$proid] = $item;
 ?>
  
 </section>  
-    
-    <div class="shop__testimonials">
-    <div class="testimonials__header">
-    <img src="./assets/images/shoe_two.png">
-    <h2>We provide you the <span>best</span> quality.</h2>
-    <p class="">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Beatae dolores quae possimus tenetur veniam ullam quo, minus, 
-        corporis a, tdolores quae poss
-    </p>
-</div>
-<div class="testimonials__people">
-    <div>
-        <img src="./assets/images/image-emily.jpg">
-            <b>Emily from xyz</b>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
-                elit. Cupiditate error unde debitis optio, officiis 
-                providen
-            </p>
-    </div>
-    <div>
-        <img src="./assets/images/image-thomas.jpg">
-            <b>Thomas from corporate</b>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
-                elit. Cupiditate error unde debitis optio, officiis 
-                providen
-            </p>
-    </div>
-    <div>
-        <img src="./assets/images/image-jennie.jpg">
-            <b>Jennie from Nike</b>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
-                elit. Cupiditate error unde debitis optio, officiis 
-                providen
-            </p>
-    </div>
-
-</div>
-    </div>
-
            
     <!--Comments section-->
 
