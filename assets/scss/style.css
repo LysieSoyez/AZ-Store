@@ -30,10 +30,6 @@ body {
   color: #949494;
   color: #e4e7eb;
 }
-body a {
-  color: #e4e7eb;
-  text-decoration: none;
-}
 body nav {
   color: #e4e7eb;
   font-family: Roboto;
@@ -50,6 +46,8 @@ body nav .shop__nav {
 body nav .shop__nav a {
   margin-right: 1.5vw;
   font-size: 0.8rem;
+  color: #e4e7eb;
+  text-decoration: none;
 }
 body nav .shop__login {
   background: none;
@@ -181,6 +179,8 @@ footer {
 footer a {
   margin-right: 1.5vw;
   font-size: 0.8rem;
+  color: #e4e7eb;
+  text-decoration: none;
 }
 
 body form {

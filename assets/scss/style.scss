@@ -48,10 +48,6 @@ body {
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(17, 24, 39, 1) 40%);
     color: #949494;
     color: $white;
-    a{
-        color: #e4e7eb;
-        text-decoration: none;
-    }
 
     // NAV
 
@@ -71,6 +67,8 @@ body {
             a {
                 margin-right: 1.5vw;
                 font-size: 0.8rem;
+                color: #e4e7eb;
+                text-decoration: none;
             }
         }
 
@@ -234,6 +232,8 @@ footer {
     a {
         margin-right: 1.5vw;
         font-size: 0.8rem;
+        color: #e4e7eb;
+        text-decoration: none;
     }
 }
 
