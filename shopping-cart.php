@@ -37,7 +37,22 @@
         </button> 
     </nav>
     
-<!-- Form -->
+<!-- Form --><?php
+$bought = ["id","blop","woop","plop"];
+
+var_dump($bought);
+
+function remove_item($button_id){
+
+global $bought;
+
+array_splice($bought, $button_id);
+}
+
+var_dump($bought);
+
+
+?>
 
 <!-- Validation place -->
 
