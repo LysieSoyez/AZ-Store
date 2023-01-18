@@ -63,6 +63,8 @@ $_SESSION['cart'];
 
     <h3> Our <span class="shop__h3__span">last products </span></h3>
 
+    <section class ="shop__article">
+
 <?php
 $items = [
     [
@@ -92,30 +94,38 @@ $items = [
 
 ];
 
+$_SESSION['items'] = $items;
+
 foreach($items as $item) {
-echo '<section class ="shop__article">';
+
 echo '<div class="shop__article__card">';
 echo '<img class ="shop__article__img" src='.$item['image_url'].'/>';
 echo '<span class="shop__article__name"><br>'.$item["product"].'</span>';
 echo '<span class="shop__article__price"><br>'.$item['price'].'€</span>';
-echo '<form method="post"><input name="id" value="'.$item['id'].'"><input type="submit" name="button1" value="Add to card"/> 
-</form>';
+echo '<form method="post"><input style="visibility:hidden;" name="id" type="number" value="'.$item['price'].'"><input name="id" style="visibility:hidden;" value="'.$item['product'].'"><input name="id" style="visibility:hidden;" type="number" value="'.$item['id'].'"><input type="submit" name="button1" value="Add to card"/> 
+</form><br>';
+echo '</div>';
 }
 
-echo '</div>
-</section>';
-
-
+// check if id sent
 
 if (isset($_POST['id'])) {
+
+    // if id sent, assign id to proid variable
+
     $proid = $_POST['id'];
+
+    // if cart is get the column id from the cart;
+
     if (!empty($_SESSION['cart'])) {
         $acol = array_column($_SESSION['cart'], 'pro_id');
         if (in_array($proid, $acol)) {
             $_SESSION['cart'][$proid]['qty'] += 1;
 } else {
 $item = [
-    'pro_id' => $_POST['pro_id'],
+    'pro_price' => $_POST['price'],
+    'pro_name' => $_POST['product'],
+    'pro_id' => $_POST['id'],
     'qty' => 1
   ];
   $_SESSION['cart'][$proid] = $item;
@@ -126,10 +136,8 @@ $_SESSION['cart'][$proid] = $item;
 }
 }
 ?>
-
-
  
-            
+</section>  
     
 
 

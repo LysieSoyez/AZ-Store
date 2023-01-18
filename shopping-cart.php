@@ -3,6 +3,39 @@ session_start();
 
 $_SESSION['cart'];
 
+
+$items = [
+    [
+        'id' => 1,
+        'product' => 'Nike Air ',
+        'price' => 234,
+        'image_url' => './assets/images/shoe_one.png', 
+    ], 
+    [
+        'id' => 2,
+        'product' => 'Nike Air ',
+        'price' => 234,
+        'image_url' => './assets/images/shoe_one.png', 
+    ],
+    [
+        'id' => 3,
+        'product' => 'Nike Air ',
+        'price' => 234,
+        'image_url' => './assets/images/shoe_one.png', 
+    ],
+    [
+        'id' => 4,
+        'product' => 'Nike Air ',
+        'price' => 234,
+        'image_url' => './assets/images/shoe_one.png', 
+    ]
+
+];
+
+echo "<pre>";
+var_dump($_SESSION['cart']);
+echo "</pre>";
+
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +77,26 @@ $_SESSION['cart'];
         </button> 
     </nav>
     
-<!-- Form -->
+<section class="shop__cart">
+
+<?php 
+
+
+foreach ($_SESSION['cart'] as $cart){
+echo '<div class="cart__line">';
+    echo '<span>'.$cart['qty'].'</span>';
+    echo '<span>'.$items[$cart['pro_id']-1]['product'].'</span>';
+    echo '<span>'.$items[$cart['pro_id']-1]['price'].'</span>';
+    echo '<form method="post"><input type="submit" value="-"></form>';
+    echo '</div>';
+}
+
+
+?>
+
+
+
+</section>
 
 <!-- Validation place -->
 
