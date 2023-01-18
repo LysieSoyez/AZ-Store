@@ -181,10 +181,10 @@ main{
         }
     .shop__article__name{
         font-family: 'roboto';
-        font-size: 3.5vw;
+        font-size:3vw;
     }
     .shop__article__price{
-        font-size: 3.5vw;
+        font-size: 3vw;
 
     }
     input{
@@ -400,6 +400,41 @@ body {
             }
         }
     }
+
+    main{
+        h3{
+           font-size: 3vw;
+           
+           }
+           .shop__article{ 
+           display: flex;
+           flex-direction: row;
+           justify-content: space-evenly;
+       
+           .shop__article__card{
+            .shop__article__img{
+                width: 12vw;
+                height: 12vw;
+                margin: 0 0 1.3vw 0;
+                }
+           .shop__article__name{
+               font-size:1.5vw;
+           }
+           .shop__article__price{
+               font-size: 1.5vw;
+       
+           }
+           input{
+               width: 7vw;
+               margin: 0 0 0 8vw;
+               padding: 1vw 0 1vw 0;
+               font-size: 1vw;
+           }
+       
+           }
+           }
+                
+       }
 
     .shop__testimonials {
 
