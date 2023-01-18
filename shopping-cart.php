@@ -36,6 +36,16 @@ echo "<pre>";
 var_dump($_SESSION['cart']);
 echo "</pre>";
 
+$sum = 0;
+foreach($items as $item){
+    $price = $item['price'];
+    $sum += $price;
+}
+
+echo "<pre>";
+echo $sum;
+echo "<pre>";
+
 ?>
 
 <!DOCTYPE html>
