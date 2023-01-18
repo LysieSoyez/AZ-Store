@@ -210,6 +210,9 @@ body form #submit {
   font-family: Roboto;
   color: #e4e7eb;
 }
+body form #submit:active {
+  color: red;
+}
 
 @media screen and (min-width: 500px) {
   .shop__testimonials .testimonials__header img {
