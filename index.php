@@ -62,6 +62,7 @@ session_start();
 
 
     <h3> Our <span class="shop__h3__span">last products </span></h3>
+    <section class ="shop__article">
 
 <?php
 $items = [
@@ -93,17 +94,16 @@ $items = [
 ];
 
 foreach($items as $item) {
-echo '<section class ="shop__article">';
 echo '<div class="shop__article__card">';
 echo '<img class ="shop__article__img" src='.$item['image_url'].'/>';
 echo '<span class="shop__article__name"><br>'.$item["product"].'</span>';
 echo '<span class="shop__article__price"><br>'.$item['price'].'€</span>';
 echo '<form method="post"><input type="submit" name="button1" value="Add to card"/> 
-</form>';
+</form><br>';
+echo '</div>';
 }
 
-echo '</div>
-</section>';
+
 
 
 if (isset($_POST['id'])) {
@@ -125,10 +125,8 @@ $_SESSION['cart'][$proid] = $item;
 }
 }
 ?>
-
-
  
-            
+</section>  
     
 
 
