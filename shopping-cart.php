@@ -37,7 +37,7 @@ var_dump($_SESSION['cart']);
 echo "</pre>";
 
 $sum = 0;
-foreach($items as $item){
+foreach($_SESSION['cart'] as $item){
     $price = $item['price'];
     $sum += $price;
 }
