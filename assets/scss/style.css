@@ -109,7 +109,7 @@ body header .shop__HeroSection .heroSection2 a {
 
 main h3 {
   color: rgb(62, 31, 241);
-  margin-bottom: 2rem;
+  margin: 5vw 0vw 5vw 0;
 }
 main h3 .shop__h3__span {
   color: white;
@@ -117,11 +117,20 @@ main h3 .shop__h3__span {
 main .shop__article {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
-main .shop__article .shop__article__card img {
-  width: 3rem;
-  height: 3rem;
+main .shop__article .shop__article__card .shop__article__img {
+  width: 10vw;
+  height: 10vw;
+}
+main .shop__article .shop__article__card .shop__article__name {
+  font-size: 3.5vw;
+}
+main .shop__article .shop__article__card .shop__article__price {
+  font-size: 3.5vw;
+}
+main .shop__article .shop__article__card input {
+  font-size: 3.5vw;
 }
 
 .shop__testimonials {
