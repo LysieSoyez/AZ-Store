@@ -7,35 +7,35 @@ $_SESSION['cart'];
 $items = [
     [
         'id' => 1,
-        'product' => 'Nike Air ',
+        'product' => 'Nike Air  ',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ], 
     [
         'id' => 2,
-        'product' => 'Nike Air ',
+        'product' => 'Nike React',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ],
     [
         'id' => 3,
-        'product' => 'Nike Air ',
+        'product' => 'Nike Streakfly ',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ],
     [
         'id' => 4,
-        'product' => 'Nike Air ',
+        'product' => 'Nike Infinity ',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ]
 
 ];
 
+
 echo "<pre>";
 var_dump($_SESSION['cart']);
 echo "</pre>";
-
 $sum = 0;
 foreach($_SESSION['cart'] as $item){
     $price = $item['price'];
@@ -56,6 +56,7 @@ if (isset($_POST['id'])) {
         exit;
     }
 }
+
 
 
 ?>
@@ -109,7 +110,8 @@ echo '<div class="cart__line">';
     echo '<span>'.$cart['qty'].'</span>';
     echo '<span>'.$items[$cart['pro_id']-1]['product'].'</span>';
     echo '<span>'.$items[$cart['pro_id']-1]['price'].'</span>';
-    echo '<form method="post"><input name="id" value='.$cart['pro_id'].'><input type="submit" value="-"></form>';
+    echo '<form method="post">
+    <input name="id" value='.$cart['pro_id'].'><input type="submit" value="-"></form>';
     echo '</div>';
 }
 
