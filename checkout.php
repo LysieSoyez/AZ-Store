@@ -98,6 +98,23 @@ session_destroy();
 </form>
 
 <!-- Validation place -->
+<?php 
+session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    if (isset($_POST['submit'])){
+        $firstName = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
+        $lastName = filter_var($_POST['lastName'], FILTER_SANITIZE_STRING);
+        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+        $address = filter_var($_POST['address'], FILTER_SANITIZE_STRING);
+        $city = filter_var($_POST['city'], FILTER_SANITIZE_STRING);
+        $code = filter_var($_POST['code'], FILTER_SANITIZE_NUMBER_INT);
+        $country = filter_var($_POST['country'], FILTER_SANITIZE_STRING);  
+    }}
+
+?>
+
+
 
 
 <!-- footer-->
