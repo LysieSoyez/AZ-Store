@@ -1,5 +1,7 @@
 <?php 
+
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +35,7 @@ session_start();
         </a>
         </div>
         <div class="shop__login">
-            <a href="./shopping-cart.php" class="shop__login" id="card">
+            <a href="./shopping-cart.php" class="shop__login" id="card"><?php echo (isset($_SESSION['cart'])) ? count($_SESSION['cart']) : 0;?>
                 <img src="./assets/images/shopping-cart.svg">
             </a> 
             <a href="./checkout.php" class="shop__login" id="login">
@@ -104,7 +106,7 @@ echo '<div class="shop__article__card">';
 echo '<img class ="shop__article__img" src='.$item['image_url'].'/>';
 echo '<span class="shop__article__name"><br>'.$item["product"].'</span>';
 echo '<span class="shop__article__price"><br>'.$item['price'].'€</span>';
-echo '<form method="post"><input style="visibility:hidden;" name="id" type="number" value="'.$item['price'].'"><input name="id" style="visibility:hidden;" value="'.$item['product'].'"><input name="id" style="visibility:hidden;" type="number" value="'.$item['id'].'"><input type="submit" name="button1" value="Add to card"/> 
+echo '<form method="post"><input style="display:none;" name="id" type="number" value="'.$item['price'].'"><input name="id" style="display:none;" value="'.$item['product'].'"><input name="id" style="display:none;" type="number" value="'.$item['id'].'"><input type="submit" name="button1" value="Add to card"/> 
 </form><br>';
 echo '</div>';
 }

@@ -57,8 +57,8 @@ if (isset($_POST['id'])) {
 }
 
 if (isset($_POST['id'])) {
-    $upid = $_POST['upid'];
-    $acol = array_column($_SESSION['cart'], $cart['pro_id']);
+    $upid = $_POST['id'];
+    $acol = array_column($_SESSION['cart'], 'pro_id');
     if (in_array($_POST['id'], $acol)) {
       $_SESSION['cart'][$upid][$card['qty']] = $_POST[$card['qty']];
     
@@ -99,7 +99,7 @@ if (isset($_POST['id'])) {
         </a>
         </div>
         <div class="shop__login">
-            <a href="./shopping-cart.php" class="shop__login" id="card">
+            <a href="./shopping-cart.php" class="shop__login" id="card"><?php echo count($_SESSION['cart']);?>
                 <img src="./assets/images/shopping-cart.svg">
             </a> 
             <a href="./checkout.php" class="shop__login" id="login">

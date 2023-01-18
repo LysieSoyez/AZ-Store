@@ -1,5 +1,7 @@
 <?php
 session_start();
+$_SESSION['cart'];
+
 
 if (isset($_SESSION['orderPlaced'])){
 $orderPlaced = $_SESSION['orderPlaced'];
@@ -41,7 +43,7 @@ $orderPlaced = $_SESSION['orderPlaced'];
         </a>
     </div>
     <div class="shop__login">
-            <a href="./shopping-cart.php" class="shop__login" id="card">
+            <a href="./shopping-cart.php" class="shop__login" id="card"><?php echo count($_SESSION['cart']);?>
                 <img src="./assets/images/shopping-cart.svg">
             </a> 
             <a href="./checkout.php" class="shop__login" id="login">
@@ -200,7 +202,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     if (count($errors) == 0){
-        unset($_SESSION['cart']);
+        $_SESSION['cart'] = [];
         $_SESSION['orderPlaced'] = true;
         header("refresh:0");
         
