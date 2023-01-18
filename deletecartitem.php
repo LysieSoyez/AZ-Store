@@ -7,38 +7,38 @@ $_SESSION['cart'];
 $items = [
     [
         'id' => 1,
-        'product' => 'Nike Air ',
+        'product' => 'Nike Air  ',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ], 
     [
         'id' => 2,
-        'product' => 'Nike Air ',
+        'product' => 'Nike React',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ],
     [
         'id' => 3,
-        'product' => 'Nike Air ',
+        'product' => 'Nike Streakfly ',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ],
     [
         'id' => 4,
-        'product' => 'Nike Air ',
+        'product' => 'Nike Infinity ',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ]
 
 ];
 
+
 echo "<pre>";
 var_dump($_SESSION['cart']);
 echo "</pre>";
-
 $sum = 0;
 foreach($_SESSION['cart'] as $item){
-    $price = $item['pro_price'];
+    $price = $item['price'];
     $sum += $price;
 }
 
@@ -54,6 +54,20 @@ if (isset($_POST['id'])) {
     
         header('Location: deletecartitem.php');
         exit;
+    }
+}
+
+if ($_POST['id']) {
+    $upid = $_POST['upid'];
+    $acol = array_column($_SESSION['cart'], $cart['pro_id']);
+    if (in_array($_POST['id'], $acol)) {
+      $_SESSION['cart'][$upid][$card['qty']] = $_POST[$card['qty']];
+    } else {
+      $item = [
+        'pro_id' => $upid,
+        'qty' => 1
+      ];
+      $_SESSION['cart'][$upid] = $item;
     }
 }
 
