@@ -33,11 +33,13 @@ echo "<pre>";
 var_dump($_SESSION['cart']);
 echo "</pre>";
 
+if (isset($_SESSION['cart'])){
 $sum = 0;
 foreach($_SESSION['cart'] as $item){
     $price = $item['pro_price'];
     $quant = $item['qty'];
     $sum += ($price * $quant);
+}
 }
 
 echo "<pre>";
@@ -99,7 +101,7 @@ if (isset($_POST['id'])) {
         </a>
         </div>
         <div class="shop__login">
-            <a href="./shopping-cart.php" class="shop__login" id="card"><?php echo count($_SESSION['cart']);?>
+            <a href="./shopping-cart.php" class="shop__login" id="card"><?php echo (isset($_SESSION['cart'])) ? count($_SESSION['cart']) : 0;?>
                 <img src="./assets/images/shopping-cart.svg">
             </a> 
             <a href="./checkout.php" class="shop__login" id="login">

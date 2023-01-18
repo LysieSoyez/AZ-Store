@@ -1,7 +1,5 @@
 <?php
 session_start();
-$_SESSION['cart'];
-
 
 if (isset($_SESSION['orderPlaced'])){
 $orderPlaced = $_SESSION['orderPlaced'];
@@ -43,7 +41,7 @@ $orderPlaced = $_SESSION['orderPlaced'];
         </a>
     </div>
     <div class="shop__login">
-            <a href="./shopping-cart.php" class="shop__login" id="card"><?php echo count($_SESSION['cart']);?>
+            <a href="./shopping-cart.php" class="shop__login" id="card"><?php echo (isset($_SESSION['cart'])) ? count($_SESSION['cart']) : 0;?>
                 <img src="./assets/images/shopping-cart.svg">
             </a> 
             <a href="./checkout.php" class="shop__login" id="login">

@@ -2,10 +2,9 @@
 
 session_start();
 
-print_r($_SESSION);
-
-
-
+if (!isset($_SESSION['cart'])){
+    $_SESSION['cart'] = [];
+}
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +39,7 @@ print_r($_SESSION);
         </div>
         <div class="shop__login">
             <a href="./shopping-cart.php" class="shop__login" id="card"><?php echo (isset($_SESSION['cart'])) ? count($_SESSION['cart']) : 0;?>
-                <img src="./assets/images/shopping-cart.svg">
+                <img alt="shopping-cart" src="./assets/images/shopping-cart.svg">
             </a> 
             <a href="./checkout.php" class="shop__login" id="login">
                 <p>
@@ -55,7 +54,7 @@ print_r($_SESSION);
         <div class="shop__HeroSection">
             <section class= heroSection1>
             <span class ="nike">Nike</span>
-            <img src="assets/images/shoe_one.png" alt="">
+            <img alt="" src="assets/images/shoe_one.png" alt="">
             </section>
            <section class= "heroSection2">
            <h1>Shoe the right <span>One</span>.</h1>
@@ -107,7 +106,7 @@ $_SESSION['items'] = $items;
 foreach($items as $item) {
 
 echo '<div class="shop__article__card">';
-echo '<img class ="shop__article__img" src="'.$item['image_url'].'"/>';
+echo '<img alt="" class="shop__article__img" src="'.$item['image_url'].'"/>';
 echo '<span class="shop__article__name"><br>'.$item["product"].'</span>';
 echo '<span class="shop__article__price"><br>'.$item['price'].'€</span>';
 echo '<form method="post"><input style="display:none;" name="id" type="number" value="'.$item['price'].'"><input name="id" style="display:none;" value="'.$item['product'].'"><input name="id" style="display:none;" type="number" value="'.$item['id'].'"><input type="submit" name="button1" value="Add to card"/> 
@@ -159,7 +158,7 @@ $obj = [
 
     <div class="shop__testimonials">
     <div class="testimonials__header">
-    <img src="./assets/images/shoe_two.png">
+    <img alt="" src="./assets/images/shoe_two.png">
     <h2>We provide you the <span>best</span> quality.</h2>
     <p class="">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
@@ -169,7 +168,7 @@ $obj = [
 </div>
 <div class="testimonials__people">
     <div>
-        <img src="./assets/images/image-emily.jpg">
+        <img alt="emily" src="./assets/images/image-emily.jpg">
             <b>Emily from xyz</b>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
                 elit. Cupiditate error unde debitis optio, officiis 
@@ -177,7 +176,7 @@ $obj = [
             </p>
     </div>
     <div>
-        <img src="./assets/images/image-thomas.jpg">
+        <img alt="thomas" src="./assets/images/image-thomas.jpg">
             <b>Thomas from corporate</b>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
                 elit. Cupiditate error unde debitis optio, officiis 
@@ -185,7 +184,7 @@ $obj = [
             </p>
     </div>
     <div>
-        <img src="./assets/images/image-jennie.jpg">
+        <img alt="jennie" src="./assets/images/image-jennie.jpg">
             <b>Jennie from Nike</b>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
                 elit. Cupiditate error unde debitis optio, officiis 
