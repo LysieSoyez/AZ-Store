@@ -52,7 +52,7 @@ if (isset($_POST['id'])) {
 
     if (empty($_SESSION['cart'])) {
     
-        header('Location: deletecartitem.php');
+        header('Location: shopping-cart.php');
         exit;
     }
 }
