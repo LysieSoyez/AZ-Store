@@ -139,8 +139,10 @@ main .shop__article .shop__article__card .shop__article__price {
   font-size: 3.5vw;
 }
 main .shop__article .shop__article__card input {
-  width: 10vw;
-  font-size: 3vw;
+  width: 15vw;
+  border-radius: 0.5vw;
+  padding: 1vw 0 1vw 0;
+  font-size: 2.5vw;
   background-color: #3b81f6;
   color: #e4e7eb;
 }
@@ -266,7 +268,6 @@ footer a {
   main .shop__article .shop__article__card input {
     margin: 0 0 0 8vw;
     max-width: 6vw;
-    padding: 1vw 0 1vw 0;
     border-radius: 0.5vw;
     font-size: 0.8vw;
   }
