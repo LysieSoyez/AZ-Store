@@ -219,6 +219,11 @@ body form input {
   margin: 0.5vh 0 2% 0;
   padding: 0.5%;
 }
+body form .error {
+  font-weight: 300;
+  color: #3b81f6;
+  margin-bottom: 0.5rem;
+}
 body form #submit {
   background-color: #2463eb;
   width: -webkit-max-content;
