@@ -56,9 +56,10 @@ body nav .shop__login {
   display: flex;
   align-items: center;
 }
-body nav .shop__login p {
+body nav .shop__login a {
   color: #e4e7eb;
   margin-left: 5%;
+  font-size: 0.8rem;
 }
 body nav .shop__login img {
   height: 4vh;

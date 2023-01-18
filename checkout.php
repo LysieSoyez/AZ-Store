@@ -29,12 +29,16 @@
             Contact
         </a>
     </div>
-        <button class="shop__login" id="login">
-            <img src="./assets/images/shopping-cart.svg" alt="Shoping Card">
-            <p> 
-                Login
-            </p>
-        </button> 
+    <div class="shop__login">
+            <a href="./shopping-cart.php" class="shop__login" id="card">
+                <img src="./assets/images/shopping-cart.svg">
+            </a> 
+            <a href="./checkout.php" class="shop__login" id="login">
+                <p>
+                    Login
+                </p>
+            </a>
+        </div>
     </nav>
 
 <!--Thanks message -->

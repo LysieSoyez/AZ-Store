@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./assets/scss/style.css">
+    <meta name="description" content="AZ[store]">
     <link rel="stylesheet" type="text/css" href="./assets/scss/style.css">
     <title>AZ[Store]</title>
 </head>
@@ -28,12 +28,16 @@
             Contact
         </a>
         </div>
-        <button class="shop__login" id="login">
-            <img src="./assets/images/shopping-cart.svg">
-            <p> 
-                Login
-            </p>
-        </button> 
+        <div class="shop__login">
+            <a href="./shopping-cart.php" class="shop__login" id="card">
+                <img src="./assets/images/shopping-cart.svg">
+            </a> 
+            <a href="./checkout.php" class="shop__login" id="login">
+                <p>
+                    Login
+                </p>
+            </a> 
+        </div>
     </nav>
 
     <!--Header (shoe the right one)-->
