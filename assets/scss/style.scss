@@ -88,7 +88,10 @@ nav{
 
 // HERO SECTION
    header{
-    .shop__HeroSection{    
+    display: flex;
+    overflow: hidden;
+    .shop__HeroSection{  
+        height: 150vw;  
         .heroSection1{
             display: flex;
             align-items: center;
@@ -132,6 +135,7 @@ nav{
                 color: $white;
                 text-decoration: none;
                 margin-top: 10vw;
+                
             }
         }
     }
@@ -257,7 +261,48 @@ footer{
 
 
 @media screen and (min-width:500px){
-
+body{
+    header{
+        .shop__HeroSection{ 
+display:flex;
+margin:0 5vw;
+flex-direction: row-reverse;
+height: auto;
+            .heroSection1{
+        
+                height: auto;
+                width: 40vw;
+                height: 50vw;
+                max-width: 1440px;
+                img{
+                    position: absolute;
+                    width: 40vw;
+                    left: 50vw;
+                }
+                .nike{
+                    font-size: 20vw;
+                }
+                
+            }
+            .heroSection2{
+              
+                margin-top: 17vw;
+                width: 30vw;
+                margin-right: 10vw;
+                max-width: 1440px;
+                h1{
+                    font-size: 5vw;
+                    margin-bottom: 1vw;
+                }
+                a{
+                    font-size: 1vw;
+                    padding: 1vw;
+                    border-radius: 0.5vw;
+                }
+            }
+        }
+       }
+}
 
 .shop__testimonials{
 
