@@ -147,26 +147,42 @@ nav{
 // ARTICLES
 main{
  h3{
-     color: rgb(62, 31, 241);
-     margin-bottom: 2rem;
+    font-family: 'roboto';
+     color:$blueFont;
+     margin: 5vw 0vw 5vw 7vw;
     .shop__h3__span{
-        color: white;
+        color:$white;
     }
-    } 
-.shop__article{ 
+    }
+    .shop__article{ 
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
-   
-    .shop__article__card{  
-        
-         img{
-        width:3rem;
-        height: 3rem;}    
-       
-    }  
-}
+    .shop__article__card{
+        .shop__article__img{
+        width: 10vw;
+        height: 10vw;
+        }
+    .shop__article__name{
+        font-family: 'roboto';
+        font-size: 3.5vw;
+    }
+    .shop__article__price{
+        font-size: 3.5vw;
+
+    }
+    input{
+        width: 15vw;
+        border-radius: 0.5vw;
+        padding: 1vw 0 1vw 0;
+        font-size: 2.5vw;
+        background-color: $blueButton;
+        color: $white;
+    }
+
+    }
+    }
          
 }
 
@@ -358,7 +374,31 @@ height: auto;
         }
        }
 }
+// ARTICLES
+main{ 
+h3{
+    font-size: 2vw;
+    margin: 0 0 2vw 6vw;
+}
+.shop__article{
+   
+    .shop__article__card{
 
+        .shop__article__name{
+            font-size: 1vw;
+        }
+        .shop__article__price{
+            font-size: 1vw;
+        }
+        input{
+        margin: 0 0 0 8vw;
+        max-width:6vw;
+        border-radius: 0.5vw;
+        font-size: 0.8vw;
+       }    
+    }         
+}
+}          
 .shop__testimonials{
 
     .testimonials__header{

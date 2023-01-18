@@ -62,53 +62,31 @@ session_start();
 
 
     <h3> Our <span class="shop__h3__span">last products </span></h3>
+    <section class ="shop__article">
 
 <?php
 $items = [
     [
         'id' => 1,
-        'product' => 'Nike Air Max 270 ',
+        'product' => 'NIKE Air ',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ], 
     [
         'id' => 2,
-        'product' => 'Nike Air Max 270 ',
+        'product' => 'NIKE Air ',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ],
     [
         'id' => 3,
-        'product' => 'Nike Air Max 270 ',
+        'product' => 'NIKE Air ',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ],
     [
         'id' => 4,
-        'product' => 'Nike Air Max 270 ',
-        'price' => 234,
-        'image_url' => './assets/images/shoe_one.png', 
-    ],[
-        'id' => 5,
-        'product' => 'Nike Air Max 270 ',
-        'price' => 234,
-        'image_url' => './assets/images/shoe_one.png', 
-    ], 
-    [
-        'id' => 6,
-        'product' => 'Nike Air Max 270 ',
-        'price' => 234,
-        'image_url' => './assets/images/shoe_one.png', 
-    ],
-    [
-        'id' => 7,
-        'product' => 'Nike Air Max 270 ',
-        'price' => 234,
-        'image_url' => './assets/images/shoe_one.png', 
-    ],
-    [
-        'id' => 8,
-        'product' => 'Nike Air Max 270 ',
+        'product' => 'NIKE Air ',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ]
@@ -116,17 +94,16 @@ $items = [
 ];
 
 foreach($items as $item) {
-echo '<section class ="shop__article">';
 echo '<div class="shop__article__card">';
-echo '<img src='.$item['image_url'].'/>';
-echo '<span class="shop__article__name">'.$item["product"].'</span>';
-echo '<span class="shop__article__price">'.$item['price'].'€</span>';
+echo '<img class ="shop__article__img" src='.$item['image_url'].'/>';
+echo '<span class="shop__article__name"><br>'.$item["product"].'</span>';
+echo '<span class="shop__article__price"><br>'.$item['price'].'€</span>';
 echo '<form method="post"><input type="submit" name="button1" value="Add to card"/> 
-</form>';
+</form><br>';
+echo '</div>';
 }
 
-echo '</div>
-</section>';
+
 
 
 if (isset($_POST['id'])) {
@@ -148,15 +125,9 @@ $_SESSION['cart'][$proid] = $item;
 }
 }
 ?>
-
-
  
-            
+</section>  
     
-
-
-
-
     <div class="shop__testimonials">
     <div class="testimonials__header">
     <img src="./assets/images/shoe_two.png">
