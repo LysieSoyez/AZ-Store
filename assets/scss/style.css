@@ -27,7 +27,6 @@ body {
   font-family: "Roboto Medium";
   background: rgb(0, 0, 0);
   background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(17, 24, 39) 40%);
-  color: #949494;
   color: #e4e7eb;
 }
 body nav {
@@ -117,7 +116,7 @@ body header .shop__HeroSection .heroSection2 a {
 main h3 {
   font-family: "roboto";
   color: #2463eb;
-  margin: 5vw 0vw 5vw 0;
+  margin: 5vw 0vw 5vw 7vw;
 }
 main h3 .shop__h3__span {
   color: #e4e7eb;
@@ -219,6 +218,58 @@ footer a {
   font-size: 0.8rem;
 }
 
+.thanks {
+  font-size: 2rem;
+  font-family: Roboto;
+  text-align: center;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+.thanks span {
+  color: var(--blueFont);
+}
+
+body form {
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: Roboto;
+}
+body form input {
+  width: 50%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: none;
+  margin: 0.5vh 0 2% 0;
+  padding: 0.5%;
+}
+body form .error {
+  font-weight: 300;
+  color: #3b81f6;
+  margin-bottom: 0.5rem;
+}
+body form #submit {
+  background-color: #2463eb;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100px;
+  padding: 1%;
+  border-radius: 10px;
+  font-family: Roboto;
+  color: #e4e7eb;
+}
+
+.thanks {
+  font-size: 2rem;
+  font-family: Roboto;
+  text-align: center;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
 @media screen and (min-width: 500px) {
   body header .shop__HeroSection {
     display: flex;
@@ -287,6 +338,7 @@ footer a {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    max-width: 60vw;
   }
   .shop__testimonials .testimonials__people div {
     display: flex;

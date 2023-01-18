@@ -38,7 +38,7 @@ echo "</pre>";
 
 $sum = 0;
 foreach($_SESSION['cart'] as $item){
-    $price = $item['price'];
+    $price = $item['pro_price'];
     $sum += $price;
 }
 

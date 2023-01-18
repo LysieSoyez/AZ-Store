@@ -1,7 +1,5 @@
 <?php 
 session_start();
-
-$_SESSION['cart'];
 ?>
 
 <!DOCTYPE html>
@@ -69,25 +67,25 @@ $_SESSION['cart'];
 $items = [
     [
         'id' => 1,
-        'product' => 'NIKE Air ',
+        'product' => 'NIKE Air 1',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ], 
     [
         'id' => 2,
-        'product' => 'NIKE Air ',
+        'product' => 'NIKE Air 2 ',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ],
     [
         'id' => 3,
-        'product' => 'NIKE Air ',
+        'product' => 'NIKE Air 3',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ],
     [
         'id' => 4,
-        'product' => 'NIKE Air ',
+        'product' => 'NIKE Air 4',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ]
@@ -123,22 +121,23 @@ if (isset($_POST['id'])) {
             $_SESSION['cart'][$proid]['qty'] += 1;
 } else {
 $item = [
-    'pro_price' => $_POST['price'],
-    'pro_name' => $_POST['product'],
-    'pro_id' => $_POST['id'],
+    'pro_price' => $items[$proid]['price'],
+    'pro_name' => $items[$proid]['product'],
+    'pro_id' => $items[$proid]['id'],
     'qty' => 1
   ];
   $_SESSION['cart'][$proid] = $item;
 }
 } else {
-
-$_SESSION['cart'][$proid] = $item;
+echo "lol";
 }
 }
 ?>
  
 </section>  
-    
+           
+    <!--Comments section-->
+
     <div class="shop__testimonials">
     <div class="testimonials__header">
     <img src="./assets/images/shoe_two.png">
@@ -177,9 +176,6 @@ $_SESSION['cart'][$proid] = $item;
 
 </div>
     </div>
-
-           
-    <!--Comments section-->
 
     </main>
     
