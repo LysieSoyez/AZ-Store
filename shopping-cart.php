@@ -43,6 +43,7 @@ echo "<pre>";
 echo $sum;
 echo "<pre>";
 
+
 if (isset($_POST['id'])) {
     $proid = $_POST['id'];
     unset($_SESSION['cart'][$proid]);
