@@ -74,29 +74,33 @@ if (isset($_POST['id'])) {
     
     <!-- nav -->
     <nav>
-    <p>
+        <p>
             AZ[Store]
         </p>
         <div class="shop__nav">
-        <a>
+        <a href="./index.php">
             Home
         </a>
-        <a>
+        <a href="#">
             About
         </a>
-        <a>
+        <a href="#">
             Products
         </a>
-        <a>
+        <a href="#">
             Contact
         </a>
         </div>
-        <button class="shop__login" id="login">
-            <img src="./assets/images/shopping-cart.svg">
-            <p> 
-                Login
-            </p>
-        </button> 
+        <div class="shop__login">
+            <a href="./shopping-cart.php" class="shop__login" id="card">
+                <img src="./assets/images/shopping-cart.svg">
+            </a> 
+            <a href="./checkout.php" class="shop__login" id="login">
+                <p>
+                    Login
+                </p>
+            </a>
+        </div>
     </nav>
     
 <section class="shop__cart">
@@ -124,16 +128,16 @@ echo '<div class="cart__line">';
 
 <!-- footer-->
 <footer>
-        <a>
+        <a href="./index.php">
             Home
         </a>
-        <a>
+        <a href="#">
             About
         </a>
-        <a>
+        <a href="#">
             Products
         </a>
-        <a>
+        <a href="#">
             Contact
         </a>
     </footer>

@@ -24,28 +24,32 @@ $orderPlaced = $_SESSION['orderPlaced'];
 <!-- nav -->
 <nav>
     <p>
-            AZ[Store]
-        </p>
-        <div class="shop__nav">
-        <a>
+        AZ[Store]
+    </p>
+    <div class="shop__nav">
+        <a href="./index.php">
             Home
         </a>
-        <a>
+        <a href="#">
             About
         </a>
-        <a>
+        <a href="#">
             Products
         </a>
-        <a>
+        <a href="#">
             Contact
         </a>
+    </div>
+    <div class="shop__login">
+            <a href="./shopping-cart.php" class="shop__login" id="card">
+                <img src="./assets/images/shopping-cart.svg">
+            </a> 
+            <a href="./checkout.php" class="shop__login" id="login">
+                <p>
+                    Login
+                </p>
+            </a>
         </div>
-        <button class="shop__login" id="login">
-            <img src="./assets/images/shopping-cart.svg">
-            <p> 
-                Login
-            </p>
-        </button> 
     </nav>
 
 <!--Thanks message -->
@@ -247,19 +251,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <!-- footer-->
 <footer>
-        <a>
-            Home
-        </a>
-        <a>
-            About
-        </a>
-        <a>
-            Products
-        </a>
-        <a>
-            Contact
-        </a>
-    </footer>
+    <a href="./index.php">
+        Home
+    </a>
+    <a href="#">
+        About
+    </a>
+    <a href="./index.php">
+        Products
+    </a>
+    <a href="#">
+        Contact
+    </a>
+</footer>
 
 </body>
 
