@@ -68,25 +68,25 @@ session_start();
 $items = [
     [
         'id' => 1,
-        'product' => 'Nike Air ',
+        'product' => 'NIKE Air ',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ], 
     [
         'id' => 2,
-        'product' => 'Nike Air ',
+        'product' => 'NIKE Air ',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ],
     [
         'id' => 3,
-        'product' => 'Nike Air ',
+        'product' => 'NIKE Air ',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ],
     [
         'id' => 4,
-        'product' => 'Nike Air ',
+        'product' => 'NIKE Air ',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ]
@@ -128,10 +128,6 @@ $_SESSION['cart'][$proid] = $item;
  
 </section>  
     
-
-
-
-
     <div class="shop__testimonials">
     <div class="testimonials__header">
     <img src="./assets/images/shoe_two.png">

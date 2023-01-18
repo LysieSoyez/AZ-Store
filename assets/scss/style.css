@@ -115,22 +115,24 @@ body header .shop__HeroSection .heroSection2 a {
 }
 
 main h3 {
-  color: rgb(58, 125, 241);
+  font-family: "roboto";
+  color: #2463eb;
   margin: 5vw 0vw 5vw 0;
 }
 main h3 .shop__h3__span {
-  color: white;
+  color: #e4e7eb;
 }
 main .shop__article {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 main .shop__article .shop__article__card .shop__article__img {
   width: 10vw;
   height: 10vw;
 }
 main .shop__article .shop__article__card .shop__article__name {
+  font-family: "roboto";
   font-size: 3.5vw;
 }
 main .shop__article .shop__article__card .shop__article__price {
@@ -139,8 +141,8 @@ main .shop__article .shop__article__card .shop__article__price {
 main .shop__article .shop__article__card input {
   width: 10vw;
   font-size: 3vw;
-  background-color: rgb(58, 125, 241);
-  color: white;
+  background-color: #3b81f6;
+  color: #e4e7eb;
 }
 
 .shop__testimonials {
@@ -250,6 +252,23 @@ footer a {
     font-size: 1vw;
     padding: 1vw;
     border-radius: 0.5vw;
+  }
+  main h3 {
+    font-size: 2vw;
+    margin: 0 0 2vw 6vw;
+  }
+  main .shop__article .shop__article__card .shop__article__name {
+    font-size: 1vw;
+  }
+  main .shop__article .shop__article__card .shop__article__price {
+    font-size: 1vw;
+  }
+  main .shop__article .shop__article__card input {
+    margin: 0 0 0 8vw;
+    max-width: 6vw;
+    padding: 1vw 0 1vw 0;
+    border-radius: 0.5vw;
+    font-size: 0.8vw;
   }
   .shop__testimonials .testimonials__header img {
     width: 25vw;
