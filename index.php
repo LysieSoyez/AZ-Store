@@ -120,20 +120,29 @@ if (isset($_POST['id'])) {
     // if cart is get the column id from the cart;
 
     if (!empty($_SESSION['cart'])) {
+    
+        // if 
         $acol = array_column($_SESSION['cart'], 'pro_id');
         if (in_array($proid, $acol)) {
             $_SESSION['cart'][$proid]['qty'] += 1;
 } else {
-$item = [
-    'pro_price' => $items[$proid]['price'],
-    'pro_name' => $items[$proid]['product'],
-    'pro_id' => $items[$proid]['id'],
+$obj = [
+    'pro_price' => $items[$proid-1]['price'],
+    'pro_name' => $items[$proid-1]['product'],
+    'pro_id' => $items[$proid-1]['id'],
     'qty' => 1
   ];
-  $_SESSION['cart'][$proid] = $item;
+  $_SESSION['cart'][$proid] = $obj;
 }
 } else {
-echo "lol";
+    $obj = [
+        'pro_price' => $items[$proid-1]['price'],
+        'pro_name' => $items[$proid-1]['product'],
+        'pro_id' => $items[$proid-1]['id'],
+        'qty' => 1
+      ];
+
+  $_SESSION['cart'][$proid] = $obj;
 }
 }
 ?>
