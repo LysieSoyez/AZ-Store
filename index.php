@@ -2,6 +2,10 @@
 
 session_start();
 
+print_r($_SESSION);
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +21,9 @@ session_start();
 <body>
     <!-- nav -->
     <nav>
-        <p>
+        <a href="./index.php">
             AZ[Store]
-        </p>
+        </a>
         <div class="shop__nav">
         <a href="#">
             Home
@@ -55,7 +59,7 @@ session_start();
             </section>
            <section class= "heroSection2">
            <h1>Shoe the right <span>One</span>.</h1>
-           <a href="www.exemple.com">See our store</a>
+           <a href="#">See our store</a>
            </section>
           
         </div>

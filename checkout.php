@@ -25,9 +25,9 @@ $orderPlaced = $_SESSION['orderPlaced'];
 
 <!-- nav -->
 <nav>
-    <p>
+    <a href="./index.php">
         AZ[Store]
-    </p>
+    </a>
     <div class="shop__nav">
         <a href="./index.php">
             Home
