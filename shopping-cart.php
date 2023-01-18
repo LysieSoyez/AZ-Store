@@ -52,11 +52,24 @@ if (isset($_POST['id'])) {
 
     if (empty($_SESSION['cart'])) {
     
-        header('Location: deletecartitem.php');
+        header('Location: shopping-cart.php');
         exit;
     }
 }
 
+if ($_POST['id']) {
+    $upid = $_POST['upid'];
+    $acol = array_column($_SESSION['cart'], $cart['pro_id']);
+    if (in_array($_POST['id'], $acol)) {
+      $_SESSION['cart'][$upid][$card['qty']] = $_POST[$card['qty']];
+    } else {
+      $item = [
+        'pro_id' => $upid,
+        'qty' => 1
+      ];
+      $_SESSION['cart'][$upid] = $item;
+    }
+}
 
 ?>
 
