@@ -73,32 +73,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         if (!empty($_POST['firstName'])){
         $firstName = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
-            if (preg_match('/^[a-zA-Z-]{1,30}$/', $firstName)){
+            if (preg_match('/^[a-zA-ZÀ-ù-]{1,30}$/', $firstName)){
                 $firstName = $_POST['firstName'];
                 $_SESSION['firstName'] = $firstName;
               } else {
-                $errFirstName = "firstname must be less than 30 characters and letters only";    
+                $errFirstName = "First name must be less than 30 characters and letters only";    
                 $firstName = "";
                 $errors[] =  "name";
                
             }
         } else {
-        $errFirstName = "first name cannot be empty";
+        $errFirstName = "First name cannot be empty";
         $errors[] =  "name";
 
         }
         if (!empty($_POST['lastName'])){
         $lastName = filter_var($_POST['lastName'], FILTER_SANITIZE_STRING);
-        if (preg_match('/^[a-zA-Z-]{1,30}$/', $lastName)){
+        if (preg_match('/^[\sa-zA-ZÀ-ù-]{1,30}$/', $lastName)){
             $lastName = $_POST['lastName'];
           } else {
-            $errLastName = "lastname must be less than 30 characters";    
+            $errLastName = "Last name must be less than 30 characters";    
             $lastName = "";
             $errors[] =  "last name";
         }
     
     } else {
-        $errLastName = "last name cannot be empty";
+        $errLastName = "Last name cannot be empty";
         $errors[] =  "last name";
 
         }
@@ -116,7 +116,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         } else {
 
-        $errEmail = "email cannot be empty";
+        $errEmail = "Email cannot be empty";
         $errors[] =  "email";
 
 
@@ -125,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $address = filter_var($_POST['address'], FILTER_SANITIZE_STRING);
     
-        if (preg_match('/^[.a-zA-Z0-9-]*$/', $address)){
+        if (preg_match('/^[.°\sa-zA-Z0-9-]*$/', $address)){
             $address = $address;
           } else {
             $errAddress = "Address cannot contain special characters";   
@@ -135,7 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         } else {
     
-        $errAddress = "address cannot be empty";
+        $errAddress = "Address cannot be empty";
         $errors[] =  "address";
                 
         }
@@ -144,7 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $city = filter_var($_POST['city'], FILTER_SANITIZE_STRING);
         
 
-        if (preg_match('/^[a-zA-Z-]*$/', $city)){
+        if (preg_match('/^[a-zA-ZÀ-ù-]*$/', $city)){
             $city = $city;
           } else {
             $errCity = "City must be filled and cannot contain special characters";   
@@ -156,7 +156,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     }
         else {
     
-        $errCity = "city cannot be empty";
+        $errCity = "City cannot be empty";
         $errors[] =  "city";
                     
         }
@@ -175,7 +175,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         }
             else {
         
-            $errCode = "code cannot be empty";
+            $errCode = "Zip code cannot be empty";
             $errors[] =  "zip code";
                         
             }
@@ -183,7 +183,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         if (!empty($_POST['country'])){
             $country = filter_var($_POST['country'], FILTER_SANITIZE_STRING);  
         
-            if (preg_match('/^[a-zA-Z]*$/', $country)){
+            if (preg_match('/^[a-zA-ZÀ-ù-]*$/', $country)){
                 $country = $country;
               } else {
                 $errCountry = "Country is letters only";   
@@ -194,7 +194,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         }
         else {
             
-        $errCountry = "country cannot be empty";
+        $errCountry = "Country cannot be empty";
         $errors[] =  "country";
                             
         }        

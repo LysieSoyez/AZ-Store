@@ -120,7 +120,7 @@ echo '<div class="cart__line">';
     echo '<span>'.$cart['qty'].'</span>';
     echo '<span>'.$items[$cart['pro_id']-1]['product'].'</span>';
     echo '<span>'.$items[$cart['pro_id']-1]['price'].'</span>';
-    echo '<form method="post"><input name="id" value='.$cart['pro_id'].'><input type="submit" value="-"></form>';
+    echo '<form method="post"><input style="display:none;" name="id" value='.$cart['pro_id'].'><input type="submit" value="-"></form>';
     echo '</div>';
 }
 
