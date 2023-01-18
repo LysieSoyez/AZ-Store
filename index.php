@@ -1,5 +1,7 @@
 <?php 
 session_start();
+
+$_SESSION['cart'];
 ?>
 
 <!DOCTYPE html>
@@ -96,12 +98,13 @@ echo '<div class="shop__article__card">';
 echo '<img class ="shop__article__img" src='.$item['image_url'].'/>';
 echo '<span class="shop__article__name"><br>'.$item["product"].'</span>';
 echo '<span class="shop__article__price"><br>'.$item['price'].'€</span>';
-echo '<form method="post"><input type="submit" name="button1" value="Add to card"/> 
+echo '<form method="post"><input name="id" value="'.$item['id'].'"><input type="submit" name="button1" value="Add to card"/> 
 </form>';
 }
 
 echo '</div>
 </section>';
+
 
 
 if (isset($_POST['id'])) {
