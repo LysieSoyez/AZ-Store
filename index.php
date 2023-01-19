@@ -4,6 +4,12 @@ session_start();
 
 if (!isset($_SESSION['cart'])){
     $_SESSION['cart'] = [];
+} 
+
+$_SESSION['cartContent'] = 0;
+
+foreach($_SESSION['cart'] as $cart){
+   $_SESSION['cartContent']  += $cart['qty'];
 }
 ?>
 
@@ -15,6 +21,7 @@ if (!isset($_SESSION['cart'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="AZ[store]">
     <link rel="stylesheet" type="text/css" href="./assets/scss/style.css">
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
     <title>AZ[Store]</title>
 </head>
 <body>
@@ -38,7 +45,7 @@ if (!isset($_SESSION['cart'])){
         </a>
         </div>
         <div class="shop__login">
-            <a href="./shopping-cart.php" class="shop__login" id="card"><?php echo (isset($_SESSION['cart'])) ? count($_SESSION['cart']) : 0;?>
+            <a href="./shopping-cart.php" class="shop__login" id="card"><?php echo (isset($_SESSION['cart'])) ? $_SESSION['cartContent'] : 0;?>
                 <img alt="shopping-cart" src="./assets/images/shopping-cart.svg">
             </a> 
             <a href="./checkout.php" class="shop__login" id="login">
@@ -54,7 +61,7 @@ if (!isset($_SESSION['cart'])){
         <div class="shop__HeroSection">
             <section class= heroSection1>
             <span class ="nike">Nike</span>
-            <img alt="" src="assets/images/shoe_one.png" alt="">
+            <img alt="" src="assets/images/shoe_one.webp" alt="">
             </section>
            <section class= "heroSection2">
            <h1>Shoe the right <span>One</span>.</h1>
@@ -76,27 +83,27 @@ if (!isset($_SESSION['cart'])){
 $items = [
     [
         'id' => 1,
-        'product' => 'NIKE Air 1',
+        'product' => 'NIKE Air',
         'price' => 234,
-        'image_url' => './assets/images/shoe_one.png', 
+        'image_url' => './assets/images/shoe_one.webp', 
     ], 
     [
         'id' => 2,
-        'product' => 'NIKE Air 2 ',
-        'price' => 234,
-        'image_url' => './assets/images/shoe_one.png', 
+        'product' => 'NIKE Vaporfly ',
+        'price' => 149,
+        'image_url' => './assets/images/Nike-vaporfly.webp', 
     ],
     [
         'id' => 3,
-        'product' => 'NIKE Air 3',
-        'price' => 234,
-        'image_url' => './assets/images/shoe_one.png', 
+        'product' => 'NIKE Pegasus',
+        'price' => 159,
+        'image_url' => './assets/images/Nike-Pegasus.webp', 
     ],
     [
         'id' => 4,
-        'product' => 'NIKE Air 4',
-        'price' => 234,
-        'image_url' => './assets/images/shoe_one.png', 
+        'product' => 'NIKE Flyease',
+        'price' => 129,
+        'image_url' => './assets/images/Nike-flyease.webp', 
     ]
 
 ];
@@ -109,7 +116,7 @@ echo '<div class="shop__article__card">';
 echo '<img alt="" class="shop__article__img" src="'.$item['image_url'].'"/>';
 echo '<span class="shop__article__name"><br>'.$item["product"].'</span>';
 echo '<span class="shop__article__price"><br>'.$item['price'].'€</span>';
-echo '<form method="post"><input style="display:none;" name="id" type="number" value="'.$item['price'].'"><input name="id" style="display:none;" value="'.$item['product'].'"><input name="id" style="display:none;" type="number" value="'.$item['id'].'"><input type="submit" name="button1" value="Add to card"/> 
+echo '<form method="post"><input style="display:none;" name="id" type="number" value="'.$item['price'].'"><input name="id" style="display:none;" value="'.$item['product'].'"><input name="id" style="display:none;" type="number" value="'.$item['id'].'"><input type="submit" name="button1" value="Add to card"/>
 </form><br>';
 echo '</div>';
 }
@@ -158,7 +165,7 @@ $obj = [
 
     <div class="shop__testimonials">
     <div class="testimonials__header">
-    <img alt="" src="./assets/images/shoe_two.png">
+    <img alt="" src="./assets/images/shoe_two.webp">
     <h2>We provide you the <span>best</span> quality.</h2>
     <p class="">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
@@ -168,7 +175,7 @@ $obj = [
 </div>
 <div class="testimonials__people">
     <div>
-        <img alt="emily" src="./assets/images/image-emily.jpg">
+        <img alt="emily" src="./assets/images/image-emily.webp">
             <b>Emily from xyz</b>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
                 elit. Cupiditate error unde debitis optio, officiis 
@@ -176,7 +183,8 @@ $obj = [
             </p>
     </div>
     <div>
-        <img alt="thomas" src="./assets/images/image-thomas.jpg">
+        <picture>
+            <img alt="thomas" src="./assets/images/image-thomas.webp"></picture>
             <b>Thomas from corporate</b>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
                 elit. Cupiditate error unde debitis optio, officiis 
@@ -184,7 +192,7 @@ $obj = [
             </p>
     </div>
     <div>
-        <img alt="jennie" src="./assets/images/image-jennie.jpg">
+        <img alt="jennie" src="./assets/images/image-jennie.webp">
             <b>Jennie from Nike</b>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
                 elit. Cupiditate error unde debitis optio, officiis 

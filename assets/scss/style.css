@@ -482,7 +482,7 @@ body .shopping_cart .pay .paypal {
     font-size: 1vw;
   }
   .shop__testimonials .testimonials__header img {
-    width: 25vw;
+    max-width: 300px;
   }
   .shop__testimonials .testimonials__header h2 {
     font-size: 3rem;
