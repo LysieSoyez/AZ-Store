@@ -137,6 +137,7 @@ if (isset($_POST['id'])) {
         $acol = array_column($_SESSION['cart'], 'pro_id');
         if (in_array($proid, $acol)) {
             $_SESSION['cart'][$proid]['qty'] += 1;
+            header("Location:index.php");
 } else {
 $obj = [
     'pro_price' => $items[$proid-1]['price'],
@@ -145,6 +146,7 @@ $obj = [
     'qty' => 1
   ];
   $_SESSION['cart'][$proid] = $obj;
+  header("Location:index.php");
 }
 } else {
     $obj = [
@@ -155,6 +157,7 @@ $obj = [
       ];
 
   $_SESSION['cart'][$proid] = $obj;
+  header("Location:index.php");
 }
 }
 ?>

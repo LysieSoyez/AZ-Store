@@ -32,35 +32,16 @@ $_SESSION['sum'] = $sum;
 echo $sum;
 echo "<pre>";*/
 
-
-if (isset($_POST['id'])) {
-    $proid = $_POST['id'];
-    
-
-    if($_SESSION['cart'][$prodid]['qty'] < 1){
-        unset($_SESSION['cart'][$proid]);
-    } else {
-        $_SESSION['cart'][$proid]['qty']--;
-    }
-
-    header('Location: shopping-cart.php');
-
-    if (empty($_SESSION['cart'])) {
-    
-        header('Location: shopping-cart.php');
-        exit;
-    }
-}
-
 if (isset($_POST['id'])) {
     $upid = $_POST['id'];
-    $acol = array_column($_SESSION['cart'], 'pro_id');
-    if (in_array($_POST['id'], $acol)) {
-      $_SESSION['cart'][$upid][$card['qty']] = $_SESSION['cart'][$upid][$card['qty']];
-      header('Location: shopping-cart.php');
+    if (array_key_exists($upid, $_SESSION['cart'])) {
+        $_SESSION['cart'][$upid]['qty'] -= 1;
+        if($_SESSION['cart'][$upid]['qty'] <= 0){
+            unset($_SESSION['cart'][$upid]);
+        }
+        header('Location: shopping-cart.php');
     }
 }
-
 ?>
 
 <!DOCTYPE html>
