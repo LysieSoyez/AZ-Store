@@ -7,6 +7,13 @@ $orderPlaced = $_SESSION['orderPlaced'];
     $orderPlaced = false;
 }
 
+$_SESSION['cartContent'] = 0;
+
+
+foreach($_SESSION['cart'] as $cart){
+    $_SESSION['cartContent']  += $cart['qty'];
+ }
+
 ?>
 
 <!DOCTYPE html>
@@ -266,12 +273,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <!-- footer-->
 <footer>
-    <a href="./index.php">
-        Home
-    </a>
-    <a href="#">
-        About
-    </a>
+<a href="./index.php">
+            Home
+        </a>
+        <a href="./about.php">
+            About
+        </a>
     <a href="./index.php">
         Products
     </a>

@@ -1,33 +1,14 @@
 <?php 
 session_start();
 
-$items = [
-    [
-        'id' => 1,
-        'product' => 'Nike Air ',
-        'price' => 234,
-        'image_url' => './assets/images/shoe_one.png', 
-    ], 
-    [
-        'id' => 2,
-        'product' => 'Nike Air ',
-        'price' => 234,
-        'image_url' => './assets/images/shoe_one.png', 
-    ],
-    [
-        'id' => 3,
-        'product' => 'Nike Air ',
-        'price' => 234,
-        'image_url' => './assets/images/shoe_one.png', 
-    ],
-    [
-        'id' => 4,
-        'product' => 'Nike Air ',
-        'price' => 234,
-        'image_url' => './assets/images/shoe_one.png', 
-    ]
 
-];
+$_SESSION['cartContent'] = 0;
+
+foreach($_SESSION['cart'] as $cart){
+    $_SESSION['cartContent']  += $cart['qty'];
+ }
+
+
 
 /*echo "<pre>";
 var_dump($_SESSION['cart']);
@@ -177,10 +158,10 @@ echo '<div class="cart__line">';
 
 <!-- footer-->
 <footer>
-        <a href="./index.php">
+<a href="./index.php">
             Home
         </a>
-        <a href="#">
+        <a href="./about.php">
             About
         </a>
         <a href="#">

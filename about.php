@@ -1,5 +1,11 @@
 <?php 
 session_start();
+
+$_SESSION['cartContent'] = 0;
+
+foreach($_SESSION['cart'] as $cart){
+    $_SESSION['cartContent']  += $cart['qty'];
+ }
 ?>
 
 <!DOCTYPE html>
@@ -99,10 +105,10 @@ session_start();
     
     <!-- footer-->
     <footer>
-        <a href="#">
+        <a href="./index.php">
             Home
         </a>
-        <a href="#">
+        <a href="./about.php">
             About
         </a>
         <a href="#">

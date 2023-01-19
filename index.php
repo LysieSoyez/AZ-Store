@@ -207,10 +207,10 @@ $obj = [
     
     <!-- footer-->
     <footer>
-        <a href="#">
+    <a href="./index.php">
             Home
         </a>
-        <a href="#">
+        <a href="./about.php">
             About
         </a>
         <a href="#">
