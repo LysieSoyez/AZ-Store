@@ -199,9 +199,9 @@ main{
    
        }
        input{
-           width: 15vw;
+           width: fit-content;
            border-radius: 0.5vw;
-           padding: 1vw 0 1vw 0;
+           padding: 0.3rem;
            font-size: 0.6rem;
            background-color: $blueButton;
            color: $white;
@@ -758,11 +758,9 @@ body{
        
            }
            input{
-               width: 6vw;
                position: relative;
-               left: 6vw;
-               bottom: 3.5vw;
-               padding: 1vw 0 1vw 0;
+               left: 7vw;
+               bottom: 3.2vw;
                font-size: 0.8rem;
            }
        
