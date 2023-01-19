@@ -78,11 +78,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 $errFirstName = "First name must be less than 30 characters and letters only";    
                 $firstName = "";
                 $errors[] =  "name";
+                $classError = "style='background-color:#F8787C'";
                
             }
         } else {
         $errFirstName = "First name cannot be empty";
         $errors[] =  "name";
+        $classError = "style='background-color:#F8787C'";
 
         }
         if (!empty($_POST['lastName'])){
@@ -93,11 +95,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $errLastName = "Last name must be less than 30 characters";    
             $lastName = "";
             $errors[] =  "last name";
+            $classError = "style='background-color:#F8787C'";
         }
     
     } else {
         $errLastName = "Last name cannot be empty";
         $errors[] =  "last name";
+        $classError = "style='background-color:#F8787C'";
 
         }
         if (!empty($_POST['email'])){
@@ -107,6 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $errEmail = "Invalid email format";
         $email = "";
         $errors[] =  "email";
+        $classError = "style='background-color:#F8787C'";
 
         } else {
             $email = $email;
@@ -116,6 +121,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $errEmail = "Email cannot be empty";
         $errors[] =  "email";
+        $classError = "style='background-color:#F8787C'";
 
 
         }
@@ -129,12 +135,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $errAddress = "Address cannot contain special characters";   
             $address = "";
             $errors[] =  "address";
+            $classError = "style='background-color:#F8787C'";
         }
 
         } else {
     
         $errAddress = "Address cannot be empty";
         $errors[] =  "address";
+        $classError = "style='background-color:#F8787C'";
                 
         }
 
@@ -148,6 +156,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $errCity = "City must be filled and cannot contain special characters";   
             $city = "";
             $errors[] =  "city";
+            $classError = "style='background-color:#F8787C'";
         }
     
     
@@ -156,6 +165,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     
         $errCity = "City cannot be empty";
         $errors[] =  "city";
+        $classError = "style='background-color:#F8787C'";
                     
         }
 
@@ -168,6 +178,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 $errCode = "Zip Code must be at least 4 numbers long";   
                 $code = "";
                 $errors[] =  "zip code";
+                $classError = "style='background-color:#F8787C'";
             }
         
         }
@@ -175,6 +186,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         
             $errCode = "Zip code cannot be empty";
             $errors[] =  "zip code";
+            $classError = "style='background-color:#F8787C'";
                         
             }
 
@@ -187,6 +199,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 $errCountry = "Country is letters only";   
                 $country = "";
                 $errors[] =  "country";
+                $classError = "style='background-color:#F8787C'";
             }
         
         }
@@ -194,6 +207,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             
         $errCountry = "Country cannot be empty";
         $errors[] =  "country";
+        $classError = "style='background-color:#F8787C'";
                             
         }        
        
@@ -213,31 +227,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 <form style="display:<?php echo ($orderPlaced == true) ? "none" : "flex";?>" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
 
     <label for="firstName">First Name</label>
-    <input name="firstName" id="firstName" type="text" value="<?php echo $firstName;?>"/>
+    <input name="firstName" <?php echo $classError ?> id="firstName" type="text" value="<?php echo $firstName;?>"/>
     <?php echo '<span class="error">'.$errFirstName.'</span>'; ?>
     
     <label for="lastName">Last Name</label>
-    <input name="lastName" id="lastName" type="text" value="<?php echo $lastName;?>"/>
+    <input name="lastName" <?php echo $classError ?> id="lastName" type="text" value="<?php echo $lastName;?>"/>
     <?php echo '<span class="error">'.$errLastName.'</span>'; ?>
 
     <label for="email">Email</label>
-    <input name="email" type="email" id="email" value="<?php echo $email;?>">
+    <input name="email" <?php echo $classError ?> type="email" id="email" value="<?php echo $email;?>">
     <?php echo '<span class="error">'.$errEmail.'</span>'; ?>
     
     <label for="address">Address</label>
-    <input name="address" type="text" id="address" value="<?php echo $address;?>">
+    <input name="address" <?php echo $classError ?> type="text" id="address" value="<?php echo $address;?>">
     <?php echo '<span class="error">'.$errAddress.'</span>'; ?>
     
     <label for="city">City</label> 
-    <input name="city" type="text" id="city" value="<?php echo $city;?>">
+    <input name="city" <?php echo $classError ?> type="text" id="city" value="<?php echo $city;?>">
     <?php echo '<span class="error">'.$errCity.'</span>'; ?>
      
     <label for="code">Zip Code</label>
-    <input name="code" type="number" id="code" value="<?php echo $code;?>">
+    <input name="code" <?php echo $classError ?> type="number" id="code" value="<?php echo $code;?>">
     <?php echo '<span class="error">'.$errCode.'</span>'; ?>
     
     <label for="country">Country</label>
-    <input name="country" type="text" id="country" value="<?php echo $country;?>">
+    <input name="country" <?php echo $classError ?> type="text" id="country" value="<?php echo $country;?>">
     <?php echo '<span class="error">'.$errCountry.'</span>'; ?>
 
     <input name="submit" type="submit" id="submit" value="Submit">
