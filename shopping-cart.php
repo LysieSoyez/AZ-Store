@@ -143,8 +143,8 @@ echo '<div class="cart__line">';
             <?php 
                 foreach ($_SESSION['cart'] as $cart){
                 echo '<div class="cart__line">';
-                    echo '<span class="name_product">'.$items[$cart['pro_id']-1]['product'].'</span>';
-                    echo '<span class="price_product">'.$items[$cart['pro_id']-1]['price'].' $</span><br>';
+                    echo '<span class="name_product">'.$_SESSION['items'][$cart['pro_id']-1]['product'].'</span>';
+                    echo '<span class="price_product">'.$_SESSION['items'][$cart['pro_id']-1]['price'].' $</span><br>';
                     echo '<span class="quantity_product"> Quantity:  '.$cart['qty'].'</span>';
                     echo '<form method="post"><input type="submit" value="-"></form>';
                     echo '</div>';

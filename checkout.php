@@ -227,31 +227,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 <form style="display:<?php echo ($orderPlaced == true) ? "none" : "flex";?>" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
 
     <label for="firstName">First Name</label>
-    <input name="firstName" <?php echo $classError ?> id="firstName" type="text" value="<?php echo $firstName;?>"/>
+    <input name="firstName" <?php echo (isset($classError)) ? $classError : "" ?> id="firstName" type="text" value="<?php echo $firstName;?>"/>
     <?php echo '<span class="error">'.$errFirstName.'</span>'; ?>
     
     <label for="lastName">Last Name</label>
-    <input name="lastName" <?php echo $classError ?> id="lastName" type="text" value="<?php echo $lastName;?>"/>
+    <input name="lastName" <?php echo (isset($classError)) ? $classError : "" ?> id="lastName" type="text" value="<?php echo $lastName;?>"/>
     <?php echo '<span class="error">'.$errLastName.'</span>'; ?>
 
     <label for="email">Email</label>
-    <input name="email" <?php echo $classError ?> type="email" id="email" value="<?php echo $email;?>">
+    <input name="email" <?php echo (isset($classError)) ? $classError : "" ?> type="email" id="email" value="<?php echo $email;?>">
     <?php echo '<span class="error">'.$errEmail.'</span>'; ?>
     
     <label for="address">Address</label>
-    <input name="address" <?php echo $classError ?> type="text" id="address" value="<?php echo $address;?>">
+    <input name="address" <?php echo (isset($classError)) ? $classError : "" ?> type="text" id="address" value="<?php echo $address;?>">
     <?php echo '<span class="error">'.$errAddress.'</span>'; ?>
     
     <label for="city">City</label> 
-    <input name="city" <?php echo $classError ?> type="text" id="city" value="<?php echo $city;?>">
+    <input name="city" <?php echo (isset($classError)) ? $classError : "" ?> type="text" id="city" value="<?php echo $city;?>">
     <?php echo '<span class="error">'.$errCity.'</span>'; ?>
      
     <label for="code">Zip Code</label>
-    <input name="code" <?php echo $classError ?> type="number" id="code" value="<?php echo $code;?>">
+    <input name="code" <?php echo (isset($classError)) ? $classError : "" ?> type="number" id="code" value="<?php echo $code;?>">
     <?php echo '<span class="error">'.$errCode.'</span>'; ?>
     
     <label for="country">Country</label>
-    <input name="country" <?php echo $classError ?> type="text" id="country" value="<?php echo $country;?>">
+    <input name="country" <?php echo (isset($classError)) ? $classError : "" ?> type="text" id="country" value="<?php echo $country;?>">
     <?php echo '<span class="error">'.$errCountry.'</span>'; ?>
 
     <input name="submit" type="submit" id="submit" value="Submit">
