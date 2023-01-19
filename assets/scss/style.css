@@ -130,7 +130,7 @@ body header .shop__HeroSection .heroSection2 a:hover {
 
 main h3 {
   color: #2463eb;
-  margin: 5vw 0 5vw 7vw;
+  margin: 5vw 0vw 5vw 7vw;
 }
 main h3 .shop__h3__span {
   color: #e4e7eb;
@@ -580,6 +580,7 @@ body .page__checkout .shopping_cart--checkout .pay h4 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
   body header .shop__HeroSection .heroSection1 {
+    height: auto;
     width: 40vw;
     height: 50vw;
     max-width: 1440px;
@@ -684,6 +685,9 @@ body .page__checkout .shopping_cart--checkout .pay h4 {
     color: var(--whites);
     font-weight: bold;
   }
+  body form {
+    justify-content: flex-start;
+  }
   body .shopping_cart {
     display: flex;
     margin: 0;
@@ -784,14 +788,12 @@ body .page__checkout .shopping_cart--checkout .pay h4 {
     min-width: 35vw;
   }
   .page__checkout .shopping_cart--checkout {
-    display: flex;
     align-items: flex-start;
     margin: 0;
     max-width: 50vw;
     margin-bottom: 0;
   }
   .page__checkout .shopping_cart--checkout .product {
-    width: 40vw;
     margin-left: 0;
     margin-right: 0;
   }

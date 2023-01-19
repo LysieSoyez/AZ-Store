@@ -832,6 +832,9 @@ body{
         }
     }
     body{
+        form{
+            justify-content: flex-start;
+        }
         .shopping_cart{
             display: flex;
             margin: 0;
@@ -947,14 +950,14 @@ body{
     
     
         .shopping_cart--checkout{
-            display: flex;
+            // display: flex;
             align-items:flex-start;
             margin: 0;
             max-width:50vw;
             margin-bottom:0;
     
             .product{
-                width: 40vw;
+                // width: 40vw;
                 margin-left: 0;
                 margin-right: 0;
                 
