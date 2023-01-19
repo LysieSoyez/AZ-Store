@@ -36,6 +36,7 @@ echo "<pre>";*/
 if (isset($_POST['id'])) {
     $proid = $_POST['id'];
     unset($_SESSION['cart'][$proid]);
+    header('Location: shopping-cart.php');
 
     if (empty($_SESSION['cart'])) {
     

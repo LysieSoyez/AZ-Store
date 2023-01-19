@@ -149,6 +149,7 @@ $obj = [
     'qty' => 1
   ];
   $_SESSION['cart'][$proid] = $obj;
+  header('Location: index.php');
 }
 } else {
     $obj = [
@@ -159,6 +160,7 @@ $obj = [
       ];
 
   $_SESSION['cart'][$proid] = $obj;
+  header('Location: index.php');
 }
 }
 ?>

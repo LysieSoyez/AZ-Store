@@ -61,15 +61,11 @@ foreach($_SESSION['cart'] as $cart){
 
 <!--Thanks message -->
 <?php echo  ($orderPlaced == true) ? '<h2 class="thanks">Thank you so much<br/> for your order, <span>'.$_SESSION['firstName'].'</span>.</h2>' : ''; ?>
-
+<main class="page__checkout">
 <!-- Form -->
-<div class= "shopping_cart">
+<div class= "shopping_cart--checkout">
 
 <div class="product">
-            <section class="member">
-                <h2>Free Delivery for <span>Members</span>.</h2>
-                <p>Become a Nike Member to get fast and <span>free delivery</span>.</p>
-            </section>
             <section class="bag">
                 <h2>bag</h2>
             </section>
@@ -80,26 +76,18 @@ foreach($_SESSION['cart'] as $cart){
                     echo '<span class="name_product">'.$_SESSION['items'][$cart['pro_id']-1]['product'].'</span>';
                     echo '<span class="price_product">'.$_SESSION['items'][$cart['pro_id']-1]['price'].' $</span><br>';
                     echo '<span class="quantity_product"> Quantity:  '.$cart['qty'].'</span>';
-                    echo '<form method="post"><input style="display:none;" name="id" value='.$cart['pro_id'].'><input type="submit" value="-"></form>';
                     echo '</div>';
                 }
                 ?>
             </section>
-               
-        </div>
-    
-        <div class="pay">
+            <div class="pay">
             <h2>Summary</h2>
-            <h3>Do you have a Promo Code?</h3>
-            <form>
-                <input type="text" id="promo-code" name="promo-code">
-                <button type="submit">Apply</button>
-            </form>
 
              <h4>total :  <?php echo $_SESSION['sum'];?> $</h4>
-             <a href="./checkout.php" class="checkout">Checkout</a>
-             <a href="#" class="paypal">Paypal</a>
+        </div>    
         </div>
+    
+        
             </div>
 
 
@@ -305,11 +293,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     <input name="submit" type="submit" id="submit" value="Submit">
 
 </form>
+</main>
 
 <!-- Validation place -->
-
-
-
 
 <!-- footer-->
 <footer>
