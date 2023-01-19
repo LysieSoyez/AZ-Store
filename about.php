@@ -6,6 +6,7 @@ $_SESSION['cartContent'] = 0;
 foreach($_SESSION['cart'] as $cart){
     $_SESSION['cartContent']  += $cart['qty'];
  }
+
 ?>
 
 <!DOCTYPE html>

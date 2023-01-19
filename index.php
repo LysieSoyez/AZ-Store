@@ -6,6 +6,10 @@ if (!isset($_SESSION['cart'])){
     $_SESSION['cart'] = [];
 } 
 
+if (!isset($_SESSION['sum'])){
+    $_SESSION['sum'] = 0;
+} 
+
 $_SESSION['cartContent'] = 0;
 
 foreach($_SESSION['cart'] as $cart){

@@ -23,6 +23,11 @@ foreach($_SESSION['cart'] as $item){
 }
 }
 
+$_SESSION['sum'] = $sum;
+
+
+
+
 /*echo "<pre>";
 echo $sum;
 echo "<pre>";*/
@@ -45,7 +50,6 @@ if (isset($_POST['id'])) {
     if (in_array($_POST['id'], $acol)) {
       $_SESSION['cart'][$upid][$card['qty']] -= 1;
       header('Location: shopping-cart.php');
-    
     }
 }
 

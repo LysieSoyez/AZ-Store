@@ -51,7 +51,7 @@ foreach($_SESSION['cart'] as $cart){
             <a href="./shopping-cart.php" class="shop__login" id="card"><?php echo (isset($_SESSION['cart'])) ? $_SESSION['cartContent'] : 0;?>
                 <img src="./assets/images/shopping-cart.svg">
             </a> 
-            <a href="./checkout.php" class="shop__login" id="login">
+            <a href="#" class="shop__login" id="login">
                 <p>
                     Login
                 </p>
@@ -63,6 +63,46 @@ foreach($_SESSION['cart'] as $cart){
 <?php echo  ($orderPlaced == true) ? '<h2 class="thanks">Thank you so much<br/> for your order, <span>'.$_SESSION['firstName'].'</span>.</h2>' : ''; ?>
 
 <!-- Form -->
+<div class= "shopping_cart">
+
+<div class="product">
+            <section class="member">
+                <h2>Free Delivery for <span>Members</span>.</h2>
+                <p>Become a Nike Member to get fast and <span>free delivery</span>.</p>
+            </section>
+            <section class="bag">
+                <h2>bag</h2>
+            </section>
+            <section class="products">
+            <?php 
+                foreach ($_SESSION['cart'] as $cart){
+                echo '<div class="cart__line">';
+                    echo '<span class="name_product">'.$_SESSION['items'][$cart['pro_id']-1]['product'].'</span>';
+                    echo '<span class="price_product">'.$_SESSION['items'][$cart['pro_id']-1]['price'].' $</span><br>';
+                    echo '<span class="quantity_product"> Quantity:  '.$cart['qty'].'</span>';
+                    echo '<form method="post"><input style="display:none;" name="id" value='.$cart['pro_id'].'><input type="submit" value="-"></form>';
+                    echo '</div>';
+                }
+                ?>
+            </section>
+               
+        </div>
+    
+        <div class="pay">
+            <h2>Summary</h2>
+            <h3>Do you have a Promo Code?</h3>
+            <form>
+                <input type="text" id="promo-code" name="promo-code">
+                <button type="submit">Apply</button>
+            </form>
+
+             <h4>total :  <?php echo $_SESSION['sum'];?> $</h4>
+             <a href="./checkout.php" class="checkout">Checkout</a>
+             <a href="#" class="paypal">Paypal</a>
+        </div>
+            </div>
+
+
 
 
 <?php 
