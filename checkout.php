@@ -51,7 +51,7 @@ foreach($_SESSION['cart'] as $cart){
             <a href="./shopping-cart.php" class="shop__login" id="card"><?php echo (isset($_SESSION['cart'])) ? $_SESSION['cartContent'] : 0;?>
                 <img src="./assets/images/shopping-cart.svg">
             </a> 
-            <a href="./checkout.php" class="shop__login" id="login">
+            <a href="#" class="shop__login" id="login">
                 <p>
                     Login
                 </p>
