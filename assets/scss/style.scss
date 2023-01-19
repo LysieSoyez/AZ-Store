@@ -698,10 +698,11 @@ body{
             }
         }
     }
-   body{ 
+    body{
         .shopping_cart{
             display: flex;
             margin: 0;
+            margin-left: 5vw;
             .product{
                 width: 40vw;
                 margin-left: 5vw;
@@ -709,14 +710,15 @@ body{
                 .member{
                     width: 40vw;
                     margin-top: 5vw;
-                   
+                  
                     h2{
                         font-size: 3vw;
                         padding-bottom: 2vw;
                     }
                     p{
                         font-size: 2vw;
-
+ 
+ 
                     }
                 }
                 .bag{
@@ -726,11 +728,12 @@ body{
                         font-size: 3.5vw;
                         padding-bottom: 2vw;
                     }
-                   
+                  
                 }
                 .products{
                     .name_product{
                         font-size: 3vw;
+                        margin-right: 1vw;
                     }
                     .price_product{
                         font-size: 1.8vw;
@@ -748,6 +751,8 @@ body{
                     };
                     .cart__line{
                         border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+                        margin-left: -5vw;
+                        width: 35vw;
                     }
                 }
             }
@@ -757,16 +762,18 @@ body{
                 h2{
                     font-size: 3.5vw;
                     padding-bottom: 2vw;
+                    margin-top: 9.8vw;
                 }
                 h3{
                     font-size:2.5vw;
+                    margin-bottom: 3vw;
                 }
                 h4{
                     font-size: 3.2vw;
                     margin-top: 8vw;
                     padding-bottom: 2.5vw;
                     margin-bottom: 5vw;
-                    
+                   
                 }
             #promo-code{
                 width: 22vw;
@@ -778,7 +785,7 @@ body{
                 width: 10vw;
                 height: 6vw;
                 font-size: 2vw;
-                transform: translateX(9vw) translateY(-0.2vw);
+                transform: translateX(14vw) translateY(-0.2vw);
             }
             a{
                 width: 25vw;
@@ -786,38 +793,7 @@ body{
                 font-size: 3vw;
             }
             }
-        
+       
         }
-   }   
-}
-
-#promo-code{
-    width: 40vw;
-    height: 6vw;
-    margin-left: -30vw;
-    margin-top: 5vw;
-    margin-right: 3vw;
-    border: none;
-    font-size: 5vw;
-    border-radius: 50vw;
-    color: $blueCardBackground;
-}
-button{
-    position: absolute;
-    right: 25vw;
-    bottom: auto;
-    width: 18vw;
-    height: 9vw;
-    background-color:transparent;
-    color: $white;
-    font-size: 3vw;
-    border: 1px rgb(255, 255, 255, 0.2) solid;
-    border-radius:5vw;
-    margin: 0;
-    transform: translateY(2vw);
-    &:hover{
-        opacity: 0.8;
-    }
-
-   
-}
+   }  
+} 
