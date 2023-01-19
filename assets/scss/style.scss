@@ -162,7 +162,7 @@ body {
                     &:hover{
                         background: rgb(159, 62, 233);
                         background: linear-gradient(90deg, rgb(233, 77, 222) 0%, rgb(161, 78, 223) 100%);
-                     }  
+                 }  
 
                 }
             }
@@ -173,51 +173,49 @@ body {
 
 // ARTICLES
 main{
- h3{
-    font-family: 'roboto';
-     color:$blueFont;
-     margin: 5vw 0vw 5vw 7vw;
-    .shop__h3__span{
-        color:$white;
-    }
-    }
-    .shop__article{ 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
-    .shop__article__card{
-        .shop__article__img{
-        width: 10vw;
-        height: 10vw;
-        }
-    .shop__article__name{
-        font-family: 'roboto';
-        font-size:0.6rem;
-    }
-    .shop__article__price{
-        font-size: 0.6rem;
-
-    }
-    input{
-        width: 15vw;
-        border-radius: 0.5vw;
-        padding: 1vw 0 1vw 0;
-        font-size: 0.6rem;
-        background-color: $blueButton;
-        color: $white;
-        transition: 0.5s;
-        cursor: pointer;
-        &:hover{
-            background: rgb(159, 62, 233);
-            background: linear-gradient(90deg, rgb(233, 77, 222) 0%, rgb(161, 78, 223) 100%);
-     }  
-          }
-        }
-    }
-    }
-    
-
+    h3{
+       font-family: 'roboto';
+        color:$blueFont;
+        margin: 5vw 0vw 5vw 7vw;
+       .shop__h3__span{
+           color:$white;
+       }
+       }
+       .shop__article{ 
+       display: flex;
+       flex-direction: row;
+       justify-content: space-evenly;
+   
+       .shop__article__card{
+           .shop__article__img{
+           width: 10vw;
+           height: 10vw;
+           }
+       .shop__article__name{
+           font-family: 'roboto';
+           font-size:0.6rem;
+       }
+       .shop__article__price{
+           font-size: 0.6rem;
+   
+       }
+       input{
+           width: 15vw;
+           border-radius: 0.5vw;
+           padding: 1vw 0 1vw 0;
+           font-size: 0.6rem;
+           background-color: $blueButton;
+           color: $white;
+           transition: 0.5s;
+           cursor: pointer;
+           &:hover{
+               background: rgb(159, 62, 233);
+               background: linear-gradient(90deg, rgb(233, 77, 222) 0%, rgb(161, 78, 223) 100%);
+        }  
+             }
+           }
+       }
+       }
 
 // TEMOIGNAGES
 
@@ -250,6 +248,12 @@ main{
 
 
 
+
+        }
+
+
+        p{
+            color:#9fa0a3;
         }
 
 
@@ -650,15 +654,17 @@ body{
                 margin: 0 0 1.3vw 0;
                 }
            .shop__article__name{
-               font-size:1.1rem;
+               font-size:1rem;
            }
            .shop__article__price{
                font-size: 1.1rem;
        
            }
            input{
-               width: 7vw;
-               margin: 0 0 0 8vw;
+               width: 6vw;
+               position: relative;
+               left: 6vw;
+               bottom: 3.5vw;
                padding: 1vw 0 1vw 0;
                font-size: 0.8rem;
            }

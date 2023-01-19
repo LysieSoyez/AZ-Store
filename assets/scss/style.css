@@ -199,6 +199,9 @@ main .shop__article .shop__article__card input:hover {
 .shop__testimonials .testimonials__header p {
   color: #9fa0a3;
 }
+.shop__testimonials .testimonials__header p {
+  color: #9fa0a3;
+}
 .shop__testimonials .testimonials__people {
   display: flex;
   flex-direction: column;
@@ -530,14 +533,16 @@ body .shopping_cart .pay .paypal {
     margin: 0 0 1.3vw 0;
   }
   main .shop__article .shop__article__card .shop__article__name {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   main .shop__article .shop__article__card .shop__article__price {
     font-size: 1.1rem;
   }
   main .shop__article .shop__article__card input {
-    width: 7vw;
-    margin: 0 0 0 8vw;
+    width: 6vw;
+    position: relative;
+    left: 6vw;
+    bottom: 3.5vw;
     padding: 1vw 0 1vw 0;
     font-size: 0.8rem;
   }
