@@ -155,8 +155,8 @@ main .shop__article .shop__article__card input {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  border-radius: 0.5vw;
-  padding: 0.3rem;
+  border-radius: 0.3rem;
+  padding: 0.5em;
   font-size: 0.6rem;
   background-color: #3b81f6;
   color: #e4e7eb;
@@ -635,7 +635,9 @@ body .page__checkout .shopping_cart--checkout .pay h4 {
     position: relative;
     left: 7vw;
     bottom: 3.2vw;
-    font-size: 0.8rem;
+    border-radius: 0.5rem;
+    padding: 1em;
+    font-size: 1rem;
   }
   .shop__testimonials .testimonials__header img {
     max-width: 300px;
