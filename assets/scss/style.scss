@@ -155,6 +155,10 @@ body {
                     color: $white;
                     text-decoration: none;
                     margin-top: 10vw;
+                    &:hover{
+                        background: rgb(159, 62, 233);
+                        background: linear-gradient(90deg, rgb(233, 77, 222) 0%, rgb(161, 78, 223) 100%);
+                     }  
 
                 }
             }
@@ -185,25 +189,31 @@ main{
         }
     .shop__article__name{
         font-family: 'roboto';
-        font-size:3vw;
+        font-size:0.6rem;
     }
     .shop__article__price{
-        font-size: 3vw;
+        font-size: 0.6rem;
 
     }
     input{
         width: 15vw;
         border-radius: 0.5vw;
         padding: 1vw 0 1vw 0;
-        font-size: 2.5vw;
+        font-size: 0.6rem;
         background-color: $blueButton;
         color: $white;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover{
+            background: rgb(159, 62, 233);
+            background: linear-gradient(90deg, rgb(233, 77, 222) 0%, rgb(161, 78, 223) 100%);
+     }  
+          }
+        }
     }
+    }
+    
 
-    }
-    }
-         
-}
 
 // TEMOIGNAGES
 
@@ -554,8 +564,7 @@ body{
 
     main{
         h3{
-           font-size: 3vw;
-           
+           font-size: 1.8rem;           
            }
            .shop__article{ 
            display: flex;
@@ -569,17 +578,17 @@ body{
                 margin: 0 0 1.3vw 0;
                 }
            .shop__article__name{
-               font-size:1.5vw;
+               font-size:1.1rem;
            }
            .shop__article__price{
-               font-size: 1.5vw;
+               font-size: 1.1rem;
        
            }
            input{
                width: 7vw;
                margin: 0 0 0 8vw;
                padding: 1vw 0 1vw 0;
-               font-size: 1vw;
+               font-size: 0.8rem;
            }
        
            }
