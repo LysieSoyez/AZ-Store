@@ -33,11 +33,13 @@ $items = [
 var_dump($_SESSION['cart']);
 echo "</pre>";*/
 
+if (isset($_SESSION['cart'])){
 $sum = 0;
 foreach($_SESSION['cart'] as $item){
     $price = $item['pro_price'];
     $quant = $item['qty'];
     $sum += ($price * $quant);
+}
 }
 
 /*echo "<pre>";
@@ -57,10 +59,11 @@ if (isset($_POST['id'])) {
 }
 
 if (isset($_POST['id'])) {
-    $upid = $_POST['upid'];
-    $acol = array_column($_SESSION['cart'], $cart['pro_id']);
+    $upid = $_POST['id'];
+    $acol = array_column($_SESSION['cart'], 'pro_id');
     if (in_array($_POST['id'], $acol)) {
-      $_SESSION['cart'][$upid][$card['qty']] = $_POST[$card['qty']];
+      $_SESSION['cart'][$upid][$card['qty']] -= 1;
+      header('Location: shopping-cart.php');
     
     }
 }
@@ -88,7 +91,7 @@ if (isset($_POST['id'])) {
         <a href="./index.php">
             Home
         </a>
-        <a href="#">
+        <a href="./about.php">
             About
         </a>
         <a href="#">
@@ -99,7 +102,7 @@ if (isset($_POST['id'])) {
         </a>
         </div>
         <div class="shop__login">
-            <a href="./shopping-cart.php" class="shop__login" id="card">
+            <a href="./shopping-cart.php" class="shop__login" id="card"><?php echo (isset($_SESSION['cart'])) ? $_SESSION['cartContent'] : 0;?>
                 <img src="./assets/images/shopping-cart.svg">
             </a> 
             <a href="./checkout.php" class="shop__login" id="login">
@@ -120,7 +123,7 @@ echo '<div class="cart__line">';
     echo '<span>'.$cart['qty'].'</span>';
     echo '<span>'.$items[$cart['pro_id']-1]['product'].'</span>';
     echo '<span>'.$items[$cart['pro_id']-1]['price'].'</span>';
-    echo '<form method="post"><input name="id" value='.$cart['pro_id'].'><input type="submit" value="-"></form>';
+    echo '<form method="post"><input style="display:none;" name="id" value='.$cart['pro_id'].'><input type="submit" value="-"></form>';
     echo '</div>';
 }
 */
@@ -141,10 +144,10 @@ echo '<div class="cart__line">';
             <?php 
                 foreach ($_SESSION['cart'] as $cart){
                 echo '<div class="cart__line">';
-                    echo '<span class="name_product">'.$items[$cart['pro_id']-1]['product'].'</span>';
-                    echo '<span class="price_product">'.$items[$cart['pro_id']-1]['price'].' $</span><br>';
-                    echo '<span class="quantity_product"> quantity:  '.$cart['qty'].'</span>';
-                    echo '<form method="post"><input type="submit" value="-"></form>';
+                    echo '<span class="name_product">'.$_SESSION['items'][$cart['pro_id']-1]['product'].'</span>';
+                    echo '<span class="price_product">'.$_SESSION['items'][$cart['pro_id']-1]['price'].' $</span><br>';
+                    echo '<span class="quantity_product"> Quantity:  '.$cart['qty'].'</span>';
+                    echo '<form method="post"><input style="display:none;" name="id" value='.$cart['pro_id'].'><input type="submit" value="-"></form>';
                     echo '</div>';
                 }
                 ?>

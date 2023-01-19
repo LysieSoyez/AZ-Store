@@ -30,7 +30,7 @@ $orderPlaced = $_SESSION['orderPlaced'];
         <a href="./index.php">
             Home
         </a>
-        <a href="#">
+        <a href="./about.php">
             About
         </a>
         <a href="#">
@@ -41,7 +41,7 @@ $orderPlaced = $_SESSION['orderPlaced'];
         </a>
     </div>
     <div class="shop__login">
-            <a href="./shopping-cart.php" class="shop__login" id="card">
+            <a href="./shopping-cart.php" class="shop__login" id="card"><?php echo (isset($_SESSION['cart'])) ? $_SESSION['cartContent'] : 0;?>
                 <img src="./assets/images/shopping-cart.svg">
             </a> 
             <a href="./checkout.php" class="shop__login" id="login">
@@ -71,35 +71,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         if (!empty($_POST['firstName'])){
         $firstName = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
-            if (preg_match('/^[a-zA-Z-]{1,30}$/', $firstName)){
+            if (preg_match('/^[a-zA-ZÀ-ù-]{1,30}$/', $firstName)){
                 $firstName = $_POST['firstName'];
                 $_SESSION['firstName'] = $firstName;
               } else {
-                $errFirstName = "firstname must be less than 30 characters and letters only";    
+                $errFirstName = "First name must be less than 30 characters and letters only";    
                 $firstName = "";
                 $errors[] =  "name";
                 $classError = "style='background-color:#F8787C'";
                
             }
         } else {
-        $errFirstName = "first name cannot be empty";
+        $errFirstName = "First name cannot be empty";
         $errors[] =  "name";
         $classError = "style='background-color:#F8787C'";
 
         }
         if (!empty($_POST['lastName'])){
         $lastName = filter_var($_POST['lastName'], FILTER_SANITIZE_STRING);
-        if (preg_match('/^[a-zA-Z-]{1,30}$/', $lastName)){
+        if (preg_match('/^[\sa-zA-ZÀ-ù-]{1,30}$/', $lastName)){
             $lastName = $_POST['lastName'];
           } else {
-            $errLastName = "lastname must be less than 30 characters";    
+            $errLastName = "Last name must be less than 30 characters";    
             $lastName = "";
             $errors[] =  "last name";
             $classError = "style='background-color:#F8787C'";
         }
     
     } else {
-        $errLastName = "last name cannot be empty";
+        $errLastName = "Last name cannot be empty";
         $errors[] =  "last name";
         $classError = "style='background-color:#F8787C'";
 
@@ -119,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         } else {
 
-        $errEmail = "email cannot be empty";
+        $errEmail = "Email cannot be empty";
         $errors[] =  "email";
         $classError = "style='background-color:#F8787C'";
 
@@ -129,7 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $address = filter_var($_POST['address'], FILTER_SANITIZE_STRING);
     
-        if (preg_match('/^[.a-zA-Z0-9-]*$/', $address)){
+        if (preg_match('/^[.°\sa-zA-Z0-9-]*$/', $address)){
             $address = $address;
           } else {
             $errAddress = "Address cannot contain special characters";   
@@ -140,7 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         } else {
     
-        $errAddress = "address cannot be empty";
+        $errAddress = "Address cannot be empty";
         $errors[] =  "address";
         $classError = "style='background-color:#F8787C'";
                 
@@ -150,7 +150,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $city = filter_var($_POST['city'], FILTER_SANITIZE_STRING);
         
 
-        if (preg_match('/^[a-zA-Z-]*$/', $city)){
+        if (preg_match('/^[a-zA-ZÀ-ù-]*$/', $city)){
             $city = $city;
           } else {
             $errCity = "City must be filled and cannot contain special characters";   
@@ -163,7 +163,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     }
         else {
     
-        $errCity = "city cannot be empty";
+        $errCity = "City cannot be empty";
         $errors[] =  "city";
         $classError = "style='background-color:#F8787C'";
                     
@@ -184,7 +184,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         }
             else {
         
-            $errCode = "code cannot be empty";
+            $errCode = "Zip code cannot be empty";
             $errors[] =  "zip code";
             $classError = "style='background-color:#F8787C'";
                         
@@ -193,7 +193,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         if (!empty($_POST['country'])){
             $country = filter_var($_POST['country'], FILTER_SANITIZE_STRING);  
         
-            if (preg_match('/^[a-zA-Z]*$/', $country)){
+            if (preg_match('/^[a-zA-ZÀ-ù-]*$/', $country)){
                 $country = $country;
               } else {
                 $errCountry = "Country is letters only";   
@@ -205,7 +205,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         }
         else {
             
-        $errCountry = "country cannot be empty";
+        $errCountry = "Country cannot be empty";
         $errors[] =  "country";
         $classError = "style='background-color:#F8787C'";
                             
@@ -214,9 +214,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     if (count($errors) == 0){
-        unset($_SESSION['cart']);
+        $_SESSION['cart'] = [];
         $_SESSION['orderPlaced'] = true;
-        header("refresh:0");
+        $_SESSION['cartContent'] = 0;
+        header('Location: checkout.php');
         
     };
 }
@@ -227,31 +228,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 <form style="display:<?php echo ($orderPlaced == true) ? "none" : "flex";?>" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
 
     <label for="firstName">First Name</label>
-    <input name="firstName" <?php echo $classError ?> id="firstName" type="text" value="<?php echo $firstName;?>"/>
+    <input name="firstName" <?php echo (isset($classError)) ? $classError : "" ?> id="firstName" type="text" value="<?php echo $firstName;?>"/>
     <?php echo '<span class="error">'.$errFirstName.'</span>'; ?>
     
     <label for="lastName">Last Name</label>
-    <input name="lastName" <?php echo $classError ?> id="lastName" type="text" value="<?php echo $lastName;?>"/>
+    <input name="lastName" <?php echo (isset($classError)) ? $classError : "" ?> id="lastName" type="text" value="<?php echo $lastName;?>"/>
     <?php echo '<span class="error">'.$errLastName.'</span>'; ?>
 
     <label for="email">Email</label>
-    <input name="email" <?php echo $classError ?> type="email" id="email" value="<?php echo $email;?>">
+    <input name="email" <?php echo (isset($classError)) ? $classError : "" ?> type="email" id="email" value="<?php echo $email;?>">
     <?php echo '<span class="error">'.$errEmail.'</span>'; ?>
     
     <label for="address">Address</label>
-    <input name="address" <?php echo $classError ?> type="text" id="address" value="<?php echo $address;?>">
+    <input name="address" <?php echo (isset($classError)) ? $classError : "" ?> type="text" id="address" value="<?php echo $address;?>">
     <?php echo '<span class="error">'.$errAddress.'</span>'; ?>
     
     <label for="city">City</label> 
-    <input name="city" <?php echo $classError ?> type="text" id="city" value="<?php echo $city;?>">
+    <input name="city" <?php echo (isset($classError)) ? $classError : "" ?> type="text" id="city" value="<?php echo $city;?>">
     <?php echo '<span class="error">'.$errCity.'</span>'; ?>
      
     <label for="code">Zip Code</label>
-    <input name="code" <?php echo $classError ?> type="number" id="code" value="<?php echo $code;?>">
+    <input name="code" <?php echo (isset($classError)) ? $classError : "" ?> type="number" id="code" value="<?php echo $code;?>">
     <?php echo '<span class="error">'.$errCode.'</span>'; ?>
     
     <label for="country">Country</label>
-    <input name="country" <?php echo $classError ?> type="text" id="country" value="<?php echo $country;?>">
+    <input name="country" <?php echo (isset($classError)) ? $classError : "" ?> type="text" id="country" value="<?php echo $country;?>">
     <?php echo '<span class="error">'.$errCountry.'</span>'; ?>
 
     <input name="submit" type="submit" id="submit" value="Submit">
