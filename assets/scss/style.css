@@ -130,7 +130,7 @@ body header .shop__HeroSection .heroSection2 a:hover {
 
 main h3 {
   color: #2463eb;
-  margin: 5vw 0 5vw 7vw;
+  margin: 5vw 0vw 5vw 7vw;
 }
 main h3 .shop__h3__span {
   color: #e4e7eb;
@@ -152,9 +152,11 @@ main .shop__article .shop__article__card .shop__article__price {
   font-size: 0.6rem;
 }
 main .shop__article .shop__article__card input {
-  width: 15vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   border-radius: 0.5vw;
-  padding: 1vw 0 1vw 0;
+  padding: 0.3rem;
   font-size: 0.6rem;
   background-color: #3b81f6;
   color: #e4e7eb;
@@ -580,6 +582,7 @@ body .page__checkout .shopping_cart--checkout .pay h4 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
   body header .shop__HeroSection .heroSection1 {
+    height: auto;
     width: 40vw;
     height: 50vw;
     max-width: 1440px;
@@ -629,11 +632,9 @@ body .page__checkout .shopping_cart--checkout .pay h4 {
     font-size: 1.1rem;
   }
   main .shop__article .shop__article__card input {
-    width: 6vw;
     position: relative;
-    left: 6vw;
-    bottom: 3.5vw;
-    padding: 1vw 0 1vw 0;
+    left: 7vw;
+    bottom: 3.2vw;
     font-size: 0.8rem;
   }
   .shop__testimonials .testimonials__header img {
