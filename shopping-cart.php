@@ -164,7 +164,7 @@ echo '<div class="cart__line">';
             </form>
 
              <h4>total :  <?php echo $sum;?> $</h4>
-             <a href="#" class="checkout">Checkout</a>
+             <a href="./checkout.php" class="checkout">Checkout</a>
              <a href="#" class="paypal">Paypal</a>
         </div>
 
