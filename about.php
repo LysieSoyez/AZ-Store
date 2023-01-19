@@ -1,6 +1,5 @@
 <?php 
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -21,10 +20,10 @@ session_start();
             AZ[Store]
         </a>
         <div class="shop__nav">
-        <a href="#">
+        <a href="./index.php">
             Home
         </a>
-        <a href="#">
+        <a href="./about.php">
             About
         </a>
         <a href="#">

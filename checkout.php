@@ -30,7 +30,7 @@ $orderPlaced = $_SESSION['orderPlaced'];
         <a href="./index.php">
             Home
         </a>
-        <a href="#">
+        <a href="./about.php">
             About
         </a>
         <a href="#">
