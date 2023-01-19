@@ -174,7 +174,6 @@ body {
 // ARTICLES
 main{
     h3{
-       font-family: 'roboto';
         color:$blueFont;
         margin: 5vw 0vw 5vw 7vw;
        .shop__h3__span{
@@ -192,7 +191,7 @@ main{
            height: 10vw;
            }
        .shop__article__name{
-           font-family: 'roboto';
+        font-weight: 600;
            font-size:0.6rem;
        }
        .shop__article__price{
@@ -604,39 +603,6 @@ body{
         
     }
 
-    main{
-        h3{
-           font-size: 1.8rem;           
-           }
-           .shop__article{ 
-           display: flex;
-           flex-direction: row;
-           justify-content: space-evenly;
-       
-           .shop__article__card{
-            .shop__article__img{
-                width: 12vw;
-                height: 12vw;
-                margin: 0 0 1.3vw 0;
-                }
-           .shop__article__name{
-               font-size:1.1rem;
-           }
-           .shop__article__price{
-               font-size: 1.1rem;
-       
-           }
-           input{
-               width: 7vw;
-               margin: 0 0 0 8vw;
-               padding: 1vw 0 1vw 0;
-               font-size: 0.8rem;
-           }
-       
-           }
-           }
-                
-       }
 
     main{
         h3{
