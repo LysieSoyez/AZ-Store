@@ -216,7 +216,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if (count($errors) == 0){
         $_SESSION['cart'] = [];
         $_SESSION['orderPlaced'] = true;
-        header("refresh:0");
+        $_SESSION['cartContent'] = 0;
+        header('Location: checkout.php');
         
     };
 }

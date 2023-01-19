@@ -62,7 +62,8 @@ if (isset($_POST['id'])) {
     $upid = $_POST['id'];
     $acol = array_column($_SESSION['cart'], 'pro_id');
     if (in_array($_POST['id'], $acol)) {
-      $_SESSION['cart'][$upid][$card['qty']] = $_POST[$card['qty']];
+      $_SESSION['cart'][$upid][$card['qty']] -= 1;
+      header('Location: shopping-cart.php');
     
     }
 }
@@ -146,7 +147,7 @@ echo '<div class="cart__line">';
                     echo '<span class="name_product">'.$_SESSION['items'][$cart['pro_id']-1]['product'].'</span>';
                     echo '<span class="price_product">'.$_SESSION['items'][$cart['pro_id']-1]['price'].' $</span><br>';
                     echo '<span class="quantity_product"> Quantity:  '.$cart['qty'].'</span>';
-                    echo '<form method="post"><input type="submit" value="-"></form>';
+                    echo '<form method="post"><input style="display:none;" name="id" value='.$cart['pro_id'].'><input type="submit" value="-"></form>';
                     echo '</div>';
                 }
                 ?>
