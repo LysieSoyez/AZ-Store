@@ -140,10 +140,10 @@ main .shop__article .shop__article__card .shop__article__img {
 }
 main .shop__article .shop__article__card .shop__article__name {
   font-family: "roboto";
-  font-size: 3.5vw;
+  font-size: 3vw;
 }
 main .shop__article .shop__article__card .shop__article__price {
-  font-size: 3.5vw;
+  font-size: 3vw;
 }
 main .shop__article .shop__article__card input {
   width: 15vw;
@@ -450,6 +450,31 @@ body .shopping_cart .pay .paypal {
     font-size: 1vw;
     padding: 1vw;
     border-radius: 0.5vw;
+  }
+  main h3 {
+    font-size: 3vw;
+  }
+  main .shop__article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  main .shop__article .shop__article__card .shop__article__img {
+    width: 12vw;
+    height: 12vw;
+    margin: 0 0 1.3vw 0;
+  }
+  main .shop__article .shop__article__card .shop__article__name {
+    font-size: 1.5vw;
+  }
+  main .shop__article .shop__article__card .shop__article__price {
+    font-size: 1.5vw;
+  }
+  main .shop__article .shop__article__card input {
+    width: 7vw;
+    margin: 0 0 0 8vw;
+    padding: 1vw 0 1vw 0;
+    font-size: 1vw;
   }
   .shop__testimonials .testimonials__header img {
     width: 25vw;

@@ -71,27 +71,27 @@ session_start();
 $items = [
     [
         'id' => 1,
-        'product' => 'NIKE Air 1',
+        'product' => 'NIKE Air',
         'price' => 234,
         'image_url' => './assets/images/shoe_one.png', 
     ], 
     [
         'id' => 2,
-        'product' => 'NIKE Air 2 ',
-        'price' => 234,
-        'image_url' => './assets/images/shoe_one.png', 
+        'product' => 'NIKE Vaporfly ',
+        'price' => 149,
+        'image_url' => './assets/images/Nike-vaporfly.png', 
     ],
     [
         'id' => 3,
-        'product' => 'NIKE Air 3',
-        'price' => 234,
-        'image_url' => './assets/images/shoe_one.png', 
+        'product' => 'NIKE Pegasus',
+        'price' => 159,
+        'image_url' => './assets/images/Nike-Pegasus.png', 
     ],
     [
         'id' => 4,
-        'product' => 'NIKE Air 4',
-        'price' => 234,
-        'image_url' => './assets/images/shoe_one.png', 
+        'product' => 'NIKE Flyease',
+        'price' => 129,
+        'image_url' => './assets/images/Nike-flyease.png', 
     ]
 
 ];
@@ -101,10 +101,10 @@ $_SESSION['items'] = $items;
 foreach($items as $item) {
 
 echo '<div class="shop__article__card">';
-echo '<img class ="shop__article__img" src='.$item['image_url'].'/>';
+echo '<img class ="shop__article__img" src="'.$item['image_url'].'"/>';
 echo '<span class="shop__article__name"><br>'.$item["product"].'</span>';
 echo '<span class="shop__article__price"><br>'.$item['price'].'€</span>';
-echo '<form method="post"><input style="visibility:hidden;" name="id" type="number" value="'.$item['price'].'"><input name="id" style="visibility:hidden;" value="'.$item['product'].'"><input name="id" style="visibility:hidden;" type="number" value="'.$item['id'].'"><input type="submit" name="button1" value="Add to card"/> 
+echo '<form method="post"><input style="display:none;" name="id" type="number" value="'.$item['price'].'"><input name="id" style="display:none;" value="'.$item['product'].'"><input name="id" style="display:none;" type="number" value="'.$item['id'].'"><input type="submit" name="button1" value="Add to card"/> 
 </form><br>';
 echo '</div>';
 }
