@@ -219,6 +219,8 @@ main .shop__article .shop__article__card input:hover {
   border-radius: 3rem;
   aspect-ratio: 1/1;
   margin-bottom: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .shop__testimonials .testimonials__people div p {
   text-align: center;
