@@ -6,10 +6,6 @@ if (!isset($_SESSION['cart'])){
     $_SESSION['cart'] = [];
 } 
 
-if (!isset($_SESSION['sum'])){
-    $_SESSION['sum'] = 0;
-} 
-
 $_SESSION['cartContent'] = 0;
 
 foreach($_SESSION['cart'] as $cart){
@@ -52,7 +48,7 @@ foreach($_SESSION['cart'] as $cart){
             <a href="./shopping-cart.php" class="shop__login" id="card"><?php echo (isset($_SESSION['cart'])) ? $_SESSION['cartContent'] : 0;?>
                 <img alt="shopping-cart" src="./assets/images/shopping-cart.svg">
             </a> 
-            <a href="./checkout.php" class="shop__login" id="login">
+            <a href="" class="shop__login" id="login">
                 <p>
                     Login
                 </p>
@@ -120,7 +116,7 @@ echo '<div class="shop__article__card">';
 echo '<img alt="" class="shop__article__img" src="'.$item['image_url'].'"/>';
 echo '<span class="shop__article__name"><br>'.$item["product"].'</span>';
 echo '<span class="shop__article__price"><br>'.$item['price'].'€</span>';
-echo '<form method="post"><input style="display:none;" name="id" type="number" value="'.$item['price'].'"><input name="id" style="display:none;" value="'.$item['product'].'"><input name="id" style="display:none;" type="number" value="'.$item['id'].'"><input type="submit" name="button1" value="Add to cart"/>
+echo '<form method="post"><input style="display:none;" name="id" type="number" value="'.$item['price'].'"><input name="id" style="display:none;" value="'.$item['product'].'"><input name="id" style="display:none;" type="number" value="'.$item['id'].'"><input type="submit" name="button1" value="Add to card"/>
 </form><br>';
 echo '</div>';
 }
@@ -149,7 +145,6 @@ $obj = [
     'qty' => 1
   ];
   $_SESSION['cart'][$proid] = $obj;
-  header('Location: index.php');
 }
 } else {
     $obj = [
@@ -160,7 +155,6 @@ $obj = [
       ];
 
   $_SESSION['cart'][$proid] = $obj;
-  header('Location: index.php');
 }
 }
 ?>

@@ -783,7 +783,6 @@ body .page__checkout .shopping_cart--checkout .pay h4 {
     align-items: flex-start;
   }
   .page__checkout form {
-    min-height: 100vh;
     max-width: 600px;
     min-width: 35vw;
   }
