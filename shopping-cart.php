@@ -1,3 +1,72 @@
+<?php 
+session_start();
+
+$items = [
+    [
+        'id' => 1,
+        'product' => 'Nike Air ',
+        'price' => 234,
+        'image_url' => './assets/images/shoe_one.png', 
+    ], 
+    [
+        'id' => 2,
+        'product' => 'Nike Air ',
+        'price' => 234,
+        'image_url' => './assets/images/shoe_one.png', 
+    ],
+    [
+        'id' => 3,
+        'product' => 'Nike Air ',
+        'price' => 234,
+        'image_url' => './assets/images/shoe_one.png', 
+    ],
+    [
+        'id' => 4,
+        'product' => 'Nike Air ',
+        'price' => 234,
+        'image_url' => './assets/images/shoe_one.png', 
+    ]
+
+];
+
+/*echo "<pre>";
+var_dump($_SESSION['cart']);
+echo "</pre>";*/
+
+$sum = 0;
+foreach($_SESSION['cart'] as $item){
+    $price = $item['pro_price'];
+    $quant = $item['qty'];
+    $sum += ($price * $quant);
+}
+
+/*echo "<pre>";
+echo $sum;
+echo "<pre>";*/
+
+
+if (isset($_POST['id'])) {
+    $proid = $_POST['id'];
+    unset($_SESSION['cart'][$proid]);
+
+    if (empty($_SESSION['cart'])) {
+    
+        header('Location: shopping-cart.php');
+        exit;
+    }
+}
+
+if (isset($_POST['id'])) {
+    $upid = $_POST['upid'];
+    $acol = array_column($_SESSION['cart'], $cart['pro_id']);
+    if (in_array($_POST['id'], $acol)) {
+      $_SESSION['cart'][$upid][$card['qty']] = $_POST[$card['qty']];
+    
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,22 +110,65 @@
         </div>
     </nav>
     
-<!-- Form --><?php
-$bought = ["id","blop","woop","plop"];
+<section class="shop__cart">
 
-var_dump($bought);
+<?php 
 
-function remove_item($button_id){
 
-global $bought;
-
-array_splice($bought, $button_id);
+/*foreach ($_SESSION['cart'] as $cart){
+echo '<div class="cart__line">';
+    echo '<span>'.$cart['qty'].'</span>';
+    echo '<span>'.$items[$cart['pro_id']-1]['product'].'</span>';
+    echo '<span>'.$items[$cart['pro_id']-1]['price'].'</span>';
+    echo '<form method="post"><input name="id" value='.$cart['pro_id'].'><input type="submit" value="-"></form>';
+    echo '</div>';
 }
-
-var_dump($bought);
+*/
 
 
 ?>
+
+<main class= "shopping_cart">
+        <div class="product">
+            <section class="member">
+                <h2>Free Delivery for <span>Members</span>.</h2>
+                <p>Become a Nike Member to get fast and <span>free delivery</span>.</p>
+            </section>
+            <section class="bag">
+                <h2>bag</h2>
+            </section>
+            <section class="products">
+            <?php 
+                foreach ($_SESSION['cart'] as $cart){
+                echo '<div class="cart__line">';
+                    echo '<span class="name_product">'.$items[$cart['pro_id']-1]['product'].'</span>';
+                    echo '<span class="price_product">'.$items[$cart['pro_id']-1]['price'].' $</span><br>';
+                    echo '<span class="quantity_product"> quantity:  '.$cart['qty'].'</span>';
+                    echo '<form method="post"><input type="submit" value="-"></form>';
+                    echo '</div>';
+                }
+                ?>
+            </section>
+               
+        </div>
+
+        <div class="pay">
+            <h2>Summary</h2>
+            <h3>Do you have a Promo Code?</h3>
+            <form>
+                <input type="text" id="promo-code" name="promo-code">
+                <button type="submit">Apply</button>
+            </form>
+
+             <h4>total :  <?php echo $sum;?> $</h4>
+             <a href="#" class="checkout">Checkout</a>
+             <a href="#" class="paypal">Paypal</a>
+        </div>
+
+    </main>
+<section class="shop__cart">
+
+</section>
 
 <!-- Validation place -->
 

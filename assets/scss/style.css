@@ -122,20 +122,36 @@ body header .shop__HeroSection .heroSection2 a {
 }
 
 main h3 {
-  color: rgb(62, 31, 241);
-  margin-bottom: 2rem;
+  font-family: "roboto";
+  color: #2463eb;
+  margin: 5vw 0vw 5vw 7vw;
 }
 main h3 .shop__h3__span {
-  color: white;
+  color: #e4e7eb;
 }
 main .shop__article {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
-main .shop__article .shop__article__card img {
-  width: 3rem;
-  height: 3rem;
+main .shop__article .shop__article__card .shop__article__img {
+  width: 10vw;
+  height: 10vw;
+}
+main .shop__article .shop__article__card .shop__article__name {
+  font-family: "roboto";
+  font-size: 3.5vw;
+}
+main .shop__article .shop__article__card .shop__article__price {
+  font-size: 3.5vw;
+}
+main .shop__article .shop__article__card input {
+  width: 15vw;
+  border-radius: 0.5vw;
+  padding: 1vw 0 1vw 0;
+  font-size: 2.5vw;
+  background-color: #3b81f6;
+  color: #e4e7eb;
 }
 
 .shop__testimonials {
@@ -262,6 +278,141 @@ body form #submit {
   text-align: center;
   padding: 2rem;
   text-transform: uppercase;
+}
+
+body .shopping_cart .product {
+  width: 90vw;
+  margin: 5vw auto;
+}
+body .shopping_cart .product .member {
+  width: 90vw;
+  border: solid 1px #e4e7eb;
+}
+body .shopping_cart .product .member h2 {
+  font-size: 7vw;
+  margin-left: 5vw;
+  margin-top: 3vw;
+}
+body .shopping_cart .product .member p {
+  font-size: 4vw;
+  margin-left: 5vw;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+}
+body .shopping_cart .product .member span {
+  color: #2463eb;
+}
+body .shopping_cart .product .bag {
+  width: 90vw;
+}
+body .shopping_cart .product .bag h2 {
+  margin-top: 8vw;
+  margin-left: 5vw;
+  font-size: 7vw;
+  border-bottom: 1px #e4e7eb solid;
+  padding-bottom: 5vw;
+  text-align: center;
+}
+body .shopping_cart .product .products {
+  margin-left: 5vw;
+  margin-top: 5vw;
+  border-bottom: solid #e4e7eb 1px;
+  padding-bottom: 5vw;
+}
+body .shopping_cart .product .products .price_product {
+  font-size: 4vw;
+}
+body .shopping_cart .product .products .name_product {
+  font-size: 6vw;
+}
+body .shopping_cart .product .products .quantity_product {
+  font-size: 3.5vw;
+}
+body .shopping_cart .product .products input {
+  display: flex;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #e4e7eb;
+  color: #e4e7eb;
+  align-items: center;
+  justify-content: center;
+  line-height: 1vw;
+  margin-left: -80vw;
+  margin-top: -2vw;
+}
+body .shopping_cart .pay {
+  width: 90vw;
+  margin-left: 5vw;
+}
+body .shopping_cart .pay h2 {
+  margin-top: 8vw;
+  margin-left: 5vw;
+  font-size: 7vw;
+  border-bottom: 1px #e4e7eb solid;
+  padding-bottom: 5vw;
+  text-align: center;
+}
+body .shopping_cart .pay h3 {
+  font-size: 5vw;
+  color: #2463eb;
+  margin-top: 5vw;
+}
+body .shopping_cart .pay #promo-code {
+  width: 40vw;
+  height: 6vw;
+  margin-left: 6vw;
+  margin-top: 5vw;
+  margin-right: 3vw;
+  border: none;
+  font-size: 5vw;
+  border-radius: 50vw;
+}
+body .shopping_cart .pay button {
+  width: 18vw;
+  height: 9vw;
+  background-color: transparent;
+  color: #e4e7eb;
+  font-size: 3vw;
+  border: #e4e7eb solid 1px;
+  border-radius: 5vw;
+}
+body .shopping_cart .pay button:hover {
+  opacity: 0.8;
+}
+body .shopping_cart .pay h4 {
+  font-size: 5vw;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-top: 10vw;
+  margin-left: 6vw;
+  margin-bottom: 10vw;
+  border-bottom: 1px solid #e4e7eb;
+  padding-bottom: 5vw;
+}
+body .shopping_cart .pay a {
+  background-color: #e4e7eb;
+  border-radius: 40vw;
+  width: 50vw;
+  height: 10vw;
+  margin: 0 auto;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5vw;
+  color: #111827;
+}
+body .shopping_cart .pay a:hover {
+  opacity: 0.9;
+}
+body .shopping_cart .pay .paypal {
+  background-color: transparent;
+  border: solid 1px #e4e7eb;
+  color: #e4e7eb;
 }
 
 @media screen and (min-width: 500px) {
