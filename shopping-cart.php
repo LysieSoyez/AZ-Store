@@ -35,7 +35,14 @@ echo "<pre>";*/
 
 if (isset($_POST['id'])) {
     $proid = $_POST['id'];
-    unset($_SESSION['cart'][$proid]);
+    
+
+    if($_SESSION['cart'][$prodid]['qty'] < 1){
+        unset($_SESSION['cart'][$proid]);
+    } else {
+        $_SESSION['cart'][$proid]['qty']--;
+    }
+
     header('Location: shopping-cart.php');
 
     if (empty($_SESSION['cart'])) {
@@ -49,7 +56,7 @@ if (isset($_POST['id'])) {
     $upid = $_POST['id'];
     $acol = array_column($_SESSION['cart'], 'pro_id');
     if (in_array($_POST['id'], $acol)) {
-      $_SESSION['cart'][$upid][$card['qty']] -= 1;
+      $_SESSION['cart'][$upid][$card['qty']] = $_SESSION['cart'][$upid][$card['qty']];
       header('Location: shopping-cart.php');
     }
 }
