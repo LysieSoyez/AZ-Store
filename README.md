@@ -28,3 +28,9 @@ Welcome to this repository ! We're a team of 4 junior web developper in training
 2023-01-17 : 
 - Basic structure, designs and functionalities. 
 - Form for checkout.
+
+## Screenshots
+
+<img src="assets/READMEimg/AZ%20Store.png" alt="AZ-Store" width="200"/>
+<img src="assets/READMEimg/AZ%20STORE-Checkout%20Page.png" alt="Checkout page" width="200"/>
+<img src="assets/READMEimg/AZ%20STORE-Shopping%20Cart.png" alt="Shopping Card" width="200"/>
